@@ -283,6 +283,166 @@ Your opportunity: [Identify white space]
 - ❌ Not available
 ```
 
+### Phase 3b: Additional Strategic Frameworks (Optional)
+
+Use these when the analysis requires a broader lens than SWOT and competitive comparison.
+
+**Framework Selector:**
+| Framework | Use When |
+|-----------|----------|
+| **SWOT** | Competitor-specific analysis (default) |
+| **Porter's Five Forces** | Understanding industry structure and competitive intensity |
+| **PESTEL** | Macro environment risks (regulatory changes, market shifts, economic headwinds) |
+| **Ansoff Matrix** | Evaluating your own strategic growth options in response to competitive pressure |
+
+---
+
+#### Porter's Five Forces
+
+*Use when you need to understand the broader competitive intensity of the industry, not just direct competitors.*
+
+```markdown
+## Porter's Five Forces Analysis: [Industry/Market]
+
+**1. Competitive Rivalry** — How intense is competition between existing players?
+- Number of direct competitors: [X]
+- Market concentration: [Fragmented / Consolidated]
+- Differentiation: [High / Low — are products similar or distinct?]
+- Exit barriers: [High / Low — can players leave easily?]
+- Assessment: [High / Medium / Low rivalry] — [reason]
+
+**2. Threat of New Entrants** — How easy is it for new competitors to enter?
+- Capital requirements: [High / Low]
+- Regulatory barriers: [Strong / Weak]
+- Network effects / switching costs protecting incumbents: [Strong / Weak]
+- Distribution access: [Difficult / Easy for new entrants]
+- Assessment: [High / Medium / Low threat] — [reason]
+
+**3. Bargaining Power of Buyers** — How much leverage do customers have?
+- Customer concentration: [Few large buyers / Many small buyers]
+- Switching costs for customers: [High / Low]
+- Price sensitivity: [High / Low]
+- Availability of alternatives: [Many / Few]
+- Assessment: [High / Medium / Low buyer power] — [implication for pricing]
+
+**4. Bargaining Power of Suppliers** — How much leverage do our suppliers have?
+- Supplier concentration: [Few / Many]
+- Switching costs for us: [High / Low]
+- Supplier differentiation: [Unique inputs / Commoditized]
+- Assessment: [High / Medium / Low supplier power] — [implication for costs]
+
+**5. Threat of Substitutes** — How easily can customers switch to a fundamentally different solution?
+- Substitute performance vs. our product: [Better / Equal / Worse on specific dimensions]
+- Price-performance trade-off: [Attractive / Unattractive]
+- Switching cost to substitute: [High / Low]
+- Assessment: [High / Medium / Low substitute threat] — [examples]
+
+**Strategic Implication:**
+[Based on the above five forces, where is our market most vulnerable / defensible?]
+[Which forces should our product strategy focus on managing?]
+```
+
+---
+
+#### PESTEL Analysis
+
+*Use when macro-environmental factors could significantly impact the competitive landscape — especially relevant for regulatory-heavy industries, markets experiencing major shifts, or when entering new geographies.*
+
+```markdown
+## PESTEL Analysis: [Market/Industry]
+
+**Political**
+- Regulatory environment: [current regulations affecting the space]
+- Policy risks: [upcoming legislation, government priorities]
+- Trade considerations: [tariffs, international trade policies if relevant]
+- Impact on us: [High / Medium / Low] — [how it affects competitive position]
+
+**Economic**
+- Macroeconomic conditions: [growth, recession risk, interest rates]
+- Purchasing power trends: [budget tightening, expansion]
+- Pricing environment: [inflationary pressures, commodity costs]
+- Impact on us: [High / Medium / Low] — [how it affects customer spending]
+
+**Social**
+- Demographic shifts: [relevant changes in target user population]
+- Behavioral trends: [shifting work patterns, preferences, norms]
+- Cultural factors: [relevant for international expansion]
+- Impact on us: [High / Medium / Low] — [how it affects demand or positioning]
+
+**Technological**
+- Emerging technologies: [AI, new platforms, infrastructure changes]
+- Disruption potential: [could these technologies commoditize our offering?]
+- Technology adoption rates: [how fast is the market adopting new tech?]
+- Impact on us: [High / Medium / Low] — [threats or opportunities]
+
+**Environmental**
+- Sustainability requirements: [regulatory or customer-driven ESG demands]
+- Physical climate risks: [if relevant to supply chain or operations]
+- Impact on us: [High / Medium / Low]
+
+**Legal**
+- Data privacy and security: [GDPR, CCPA, sector-specific regulations]
+- IP protection: [patent landscape, trade secret risks]
+- Employment regulations: [if relevant to operations]
+- Impact on us: [High / Medium / Low] — [specific compliance requirements]
+
+**Overall PESTEL Assessment:**
+[Top 2-3 macro forces that most affect our competitive position, with recommended response]
+```
+
+---
+
+#### Ansoff Matrix
+
+*Use when evaluating your strategic growth options in response to competitive pressure. Helps frame the "what do we do next?" question.*
+
+```markdown
+## Ansoff Matrix: Strategic Growth Options
+
+**Context:** Given the competitive analysis above, evaluate these four growth strategies:
+
+|  | Existing Products | New Products |
+|--|-------------------|--------------|
+| **Existing Markets** | Market Penetration | Product Development |
+| **New Markets** | Market Development | Diversification |
+
+**1. Market Penetration** (Existing products → Existing markets)
+*Win more of what you already compete for*
+- Opportunity: [What market share can we realistically gain?]
+- How: [Pricing, marketing, sales velocity, feature parity with competitors]
+- Risk: [Low — you know the market and the product]
+- Competitive response: [Will competitors retaliate on price or features?]
+- Recommendation: [Pursue / Not the right time / Already maxed out]
+
+**2. Product Development** (New products → Existing markets)
+*Solve new problems for your existing customers*
+- Opportunity: [What adjacent problems do our best customers have?]
+- How: [New features, integrations, product lines]
+- Risk: [Medium — you know the market but not the new product domain]
+- Competitive relevance: [Does this close a gap vs. competitors?]
+- Recommendation: [Pursue / Not the right time]
+
+**3. Market Development** (Existing products → New markets)
+*Take your current product to new segments or geographies*
+- Opportunity: [Which new segments or geos show clear demand?]
+- How: [Localization, new GTM, segment-specific messaging]
+- Risk: [Medium — you know the product but not the new market]
+- Competitive landscape in new market: [More / Less / Same intensity]
+- Recommendation: [Pursue / Not the right time]
+
+**4. Diversification** (New products → New markets)
+*Bet on something entirely new*
+- Opportunity: [Is there a compelling adjacency worth exploring?]
+- Risk: [High — unknown market and unknown product territory]
+- When to consider: [Only when existing markets are saturated or declining]
+- Recommendation: [Pursue / Not the right time / Future option]
+
+**Recommended Growth Path:**
+[Based on competitive analysis, which 1-2 Ansoff strategies should we focus on and why?]
+```
+
+---
+
 ### Phase 4: Strategic Recommendations (30 min)
 
 I'll categorize insights into 3 buckets:

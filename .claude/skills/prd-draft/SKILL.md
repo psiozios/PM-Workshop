@@ -938,4 +938,52 @@ Add this to the standard PRD for AI features:
 - Accuracy < ___% after 2 weeks
 - User satisfaction < ___%
 - Escalation rate > ___%
+
+---
+
+## Mode: --brief (Lightweight Feature Brief)
+
+Use `--brief` when a feature needs a prioritization decision, not an engineering spec. Produces a 300-400 word brief that answers "should we build this?" before committing to a full PRD.
+
+**When to use:** Before the PRD, when the idea is still a candidate. Escalate to full PRD when it gets prioritized.
+
+**Brief structure (always one page):**
+
+```markdown
+# Feature Brief: [Name]
+
+**Status:** Candidate — not yet committed
+**Author:** [name] | **Date:** [date]
+
+## The Problem
+[2 sentences, specific: who, when, what gets stuck, how often]
+
+## The Hypothesis
+If we [build X], then [users will Y], because [underlying insight].
+
+## Why Now
+[1 sentence on urgency — opportunity, strategic moment, or cost of delay]
+
+## Rough Shape of a Solution
+[2-4 bullets — direction only, not a spec. Enough for engineers to react.]
+
+## Business Case
+
+| Signal | Value |
+|--------|-------|
+| Users affected | [N or %] |
+| Estimated impact | [metric + magnitude] |
+| Effort signal | [S / M / L rough estimate] |
+| Confidence | [Low / Medium / High] |
+
+## Risks
+1. [Risk 1]
+2. [Risk 2]
+
+## Next Step
+[What needs to happen to move this to a full PRD — research, data pull, design spike, exec alignment]
+```
+
+**Output:** `outputs/prds/brief-[feature]-[date].md`
+**Escalate to:** `/prd-draft` (full) when the feature is prioritized
 ```

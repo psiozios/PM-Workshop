@@ -385,3 +385,42 @@ When the PM uses `/experiment-decision`, I automatically:
 - **What I look for:** How long experiments take, engineering cost
 - **How I use it:** ROI calculation in the framework
 - **Example:** "Last experiment took 3 weeks; if we ship in 1 week and monitor, ROI favors shipping"
+
+---
+
+## Mode: --brainstorm (Generate Experiment Ideas)
+
+Use `/experiment-decision --brainstorm` when you want to generate experiment ideas for a specific metric or user behavior, rather than evaluate a single experiment.
+
+```
+/experiment-decision --brainstorm
+
+Tell me:
+1. What metric are you trying to move? (e.g., D7 activation rate, trial-to-paid conversion, feature adoption)
+2. What's the current rate and your target? (e.g., 28% → 40%)
+3. What do you already know about why users don't do the thing? (friction, awareness, value perception, etc.)
+4. Any constraints? (no code changes this sprint, only email channel, etc.)
+
+I'll generate 8-12 experiment ideas organized by effort and expected impact.
+```
+
+### Experiment Brainstorm Framework
+
+For each experiment, answer:
+- **Hypothesis:** If we [change X], then [metric Y] will [increase/decrease] because [user behavior reason]
+- **Effort:** [S = 1-3 days / M = 1 week / L = 2-3 weeks]
+- **Expected impact:** [Low / Medium / High] and why
+- **Test or ship:** Should this be A/B tested or just shipped with monitoring?
+
+### Experiment Idea Categories to Cover
+
+```
+1. Remove friction (make the desired action easier)
+2. Increase awareness (make users notice the feature or value)
+3. Improve value communication (make the benefit more obvious)
+4. Change timing (trigger at a better moment)
+5. Social proof (show others doing the thing)
+6. Personalization (different experience for different segments)
+7. Defaults (pre-select the better option)
+8. Reduce commitment (let them try before they fully commit)
+```

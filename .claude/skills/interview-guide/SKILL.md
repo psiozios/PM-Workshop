@@ -158,6 +158,141 @@ Focus on understanding:
 
 ---
 
+## Curated Question Bank (63 Questions)
+
+*Source: Validated question library organized by phase and category. Select questions that fit your research goal — don't use all of them. A 45-60 min interview typically uses 10-15 questions.*
+
+**Selection logic:**
+- Use 3-5 Introduction questions to warm up (pick based on interviewer comfort and participant context)
+- Use 8-12 Interview questions for core insight extraction (prioritize JTBD and Storytelling categories)
+- Always use 3-4 Conclusion questions to close every session
+
+---
+
+### Phase 1: Introduction Questions
+
+**Purpose:** Build rapport, set context, move from small talk to substance.
+
+**General (role & daily life)**
+- "Could you tell me a little about your role and what a typical day looks like?" *(open-ended, allows them to start with familiar territory)*
+- "If you had to explain your job to a child, how would you describe it?" *(fun, disarming ice-breaker)*
+- "Outside of work, what are your interests or hobbies?" *(personal, non-work — relaxes the atmosphere)*
+
+**General (expertise & career)**
+- "What initially interested you in [their area of expertise]?" *(shows genuine interest in their background)*
+- "Is there a particular project or achievement in your career that you're especially proud of?" *(lets them share a success, sets positive tone)*
+- "It's such a fascinating field. How does it feel to [do something meaningful they do]?" *(connects on a human level)*
+- "How have things changed in your role or industry since you started?" *(acknowledges their expertise, invites insights)*
+- "I've always been interested in [something relevant] because [reason]. How did you manage to break into [specific field]?" *(demonstrates genuine curiosity)*
+
+**General (topic transition)**
+- "Before we dive into specifics, I'd love to hear more about your experience with [relevant topic or product]." *(allows them to share general feelings before detailed questions)*
+- "If you had a magic wand, what one thing would you change about your current tools or processes?" *(general, easy, surprising answers possible)*
+
+**Homework-based (use when you've done research on them)**
+- "I noticed [something relevant about their company or role from your research] — could you tell me more about that?" *(demonstrates commitment and respect for their time)*
+
+---
+
+### Phase 2: Interview Questions
+
+**Purpose:** Extract stories, understand jobs-to-be-done, find root causes. This is the core of the interview.
+
+---
+
+**JTBD (Jobs-to-be-Done) — use for product-market fit and outcome research**
+- "When [job step], how important is it for you to achieve [desired outcome]?" *(JTBD importance — pair with satisfaction question)*
+- "When [job step], how satisfied are you with your ability to achieve [desired outcome]?" *(JTBD satisfaction — pair with importance question)*
+
+---
+
+**Storytelling: Start a Specific Story** *(always prefer past behavior over opinions)*
+- "Tell me about a specific time when [something happened with the product or problem]."
+- "Can you describe a moment when our product didn't meet your expectations?" *(starts a concrete story)*
+- "Have you used our product in an unconventional or creative way? Can you share that experience?"
+- "What was the biggest challenge you faced when learning to use our product? Tell me about that."
+- "Have you ever felt frustrated while using our product? Can you tell me about that experience?"
+- "Can you walk me through the last time you encountered a problem with [specific task or process]?"
+- "Can you recall a recent situation where you felt our product significantly saved your time or effort?"
+- "Tell me about the time when our product impacted the relationships or interactions you have with your customers."
+
+**Storytelling: Story Detail Probes** *(use AFTER a story starts to go deeper)*
+- "Where were you?"
+- "What time of day was it?"
+- "Did someone help you?"
+- "What happened next?"
+- "What was the conversation like when you talked about [topic of the conversation]?"
+- "What triggered you to think about [action/product]?"
+- "How much time did you spend trying to solve this?" *(if they didn't spend much time, it's probably not a real problem)*
+- "What tools or methods did you use?" *(surfaces alternatives and indirect competitors)*
+- "Have you tried any workarounds? Can you describe them?" *(workarounds reveal unsolved problems)*
+
+---
+
+**Root Cause Analysis** *(dig into why something matters)*
+- "You told me [paraphrase]. Is that correct? Could you help me understand it better? Why is it a problem for you?"
+- "What I'm hearing is [paraphrase]. What exactly were the consequences?"
+- "How do you feel about [paraphrase]? How exactly did it influence your work, plans, or team?" *(probes importance and emotional weight)*
+
+---
+
+**Feature Requests** *(careful — these are opinions, not behaviors)*
+- "Why is it a problem for you? What were the consequences the last time?" *(root-cause the request before taking it at face value)*
+- "What would that do for you if you had that feature?" *(understand the underlying job, not just the surface request)*
+
+---
+
+**New Customer Journey** *(use for new user or acquisition research)*
+- "What other solutions did you try? Why or why not?"
+- "What did you imagine using this product or service would be like?" *(surfaces expectations vs. reality)*
+- "What other solutions did you consider before trying the product?"
+- "If this product wasn't available to you, what would you do instead?"
+- "When did you first realize you needed something to solve your problem? Tell me about that situation."
+- "Did you have any anxiety about the purchase?"
+- "Did you talk to anyone else about what choices you were considering? Tell me about that situation."
+- "When choosing a tool or solution for [specific task], what factors are most important to you?"
+
+---
+
+**General Interview Questions** *(opinion-based — flag that these aren't pure JTBD but can be useful context)*
+- "What's something you're trying to achieve in your role that our product doesn't currently support?"
+- "When recommending our product to someone, what would you say? Better: Did you actually recommend it? Tell me about that."
+- "Is there anything you feel is missing in the market that could help you with [specific task or problem]?"
+- "How do you measure success in your role, and how does [specific task or process] contribute to that?"
+- "Are there any external factors that influence how you use our product (e.g., industry trends, organizational changes)?"
+- "Is there a particular aspect of the product you find confusing or overly complex?"
+- "What's your ideal outcome for [specific task or challenge]?"
+- "Are there any trends or changes in your industry that are influencing how you approach [specific task or process]?"
+- "How do you stay informed or up-to-date in your field?"
+
+*Note on opinion questions: These can be useful but be cautious. People often say what they think you want to hear or what sounds good, not what they'd actually do. Always try to anchor opinion questions to specific past behavior ("Tell me about the last time…").*
+
+---
+
+### Phase 3: Conclusion Questions
+
+**Purpose:** Surface final insights, ensure completeness, recruit next participants.
+
+**Insights** *(something may have shifted during the interview)*
+- "Reflecting on our conversation, what do you think is the most important aspect we should focus on?"
+- "Can you think of any additional resources or support that would enhance your experience with [product]?"
+- "How would you summarize your overall experience with [product] in a few sentences?"
+- "Do you have any final thoughts or comments about the topics we discussed today?"
+
+**Important Details** *(ensure nothing critical was missed)*
+- "Were there any questions you expected me to ask that I didn't?"
+- "Is there anything we haven't covered that you think is important for us to know about your experience with [product]?"
+
+**Recruiting** *(keep the research momentum going)*
+- "Would you be open to follow-up conversations if we have more questions in the future?"
+- "Do you know of anyone else who might have valuable insights to share? We'd love an introduction."
+
+**Interview Feedback** *(helps improve the process)*
+- "Is there anything you found particularly enjoyable or frustrating about this interview? What could we improve?"
+- "Based on our conversation, what should be our immediate next steps?" *(surfaces what they think you should act on)*
+
+---
+
 ## Quick Start Prompt
 
 When PM types `/interview-guide`, respond:
@@ -362,6 +497,8 @@ Before delivering the interview guide, verify:
 | **Follow-up prompts included** | At least 2-3 follow-up probes per core question | [ ] |
 | **Closing includes referrals** | Guide asks "Who else should I talk to?" | [ ] |
 | **Output file saved** | Guide saved to `outputs/interview-guides-[topic]-[date].md` | [ ] |
+| **Question bank used** | Questions drawn from the curated 63-question library where applicable, not improvised | [ ] |
+| **Question count is right** | 10-15 questions total for a 45-60 min interview — not more, not fewer | [ ] |
 
 **If any check fails, address it before delivering the output.**
 
@@ -375,3 +512,65 @@ Before delivering the interview guide, verify:
 - **Silence is okay** - Let them think
 - **Avoid leading questions** - Don't suggest the answer you want
 - **Reference past behavior** - "Last time you X, what happened?" beats "Would you use X?"
+
+---
+
+## Mode: --recruit (PM Candidate Interview Guide)
+
+Use `/interview-guide --recruit` to build a structured guide for interviewing PM candidates. This is for hiring, not user research.
+
+```
+/interview-guide --recruit
+
+Tell me:
+1. PM role and level (IC PM, Senior PM, Group PM, etc.)
+2. Top 2-3 competencies you're hiring for
+3. Any specific signals you've seen in resumes or screens that you want to probe
+
+Output: outputs/interview-guides/pm-interview-[level]-[date].md
+```
+
+### PM Candidate Interview Structure (60 min)
+
+```
+## Opening (5 min)
+"Walk me through your background — specifically how you got into product and what problems you've loved working on."
+Listen for: Genuine curiosity, user empathy, ability to tell a clear story
+
+## Product Sense (15-20 min)
+"Tell me about a product you use every day that you think is underrated. What makes it good, and what would you change?"
+Listen for: Depth of thinking, user focus vs. feature focus, quality of tradeoff reasoning
+
+Follow-up: "How would you decide what to build next on that product?"
+Listen for: Structured thinking, willingness to use data AND intuition
+
+## Execution (15-20 min)
+"Tell me about a project where you had to manage significant ambiguity or change. Walk me through how you handled it."
+Listen for: Resilience, clear ownership, how they involve the team
+
+Follow-up: "What would you have done differently?"
+Listen for: Self-awareness and learning orientation
+
+## Stakeholder / Influence (10 min)
+"Tell me about a time you had to get alignment from stakeholders who had competing priorities. How did you approach it?"
+Listen for: Political savvy, negotiation, influence without authority
+
+## Curiosity + Culture (5-10 min)
+"What's a PM skill or area you're actively trying to develop?"
+"What do you look for in a team you want to join?"
+Listen for: Self-awareness, growth mindset, whether they'd thrive here
+
+## Their Questions (5-10 min)
+Good candidates ask about: team structure and culture, how decisions get made, what success looks like in 90 days, the hardest part of the role
+```
+
+### Candidate Evaluation Rubric
+
+| Competency | Signal looked for | Score (1-5) |
+|------------|------------------|-------------|
+| Product sense | Quality of product critique, user empathy, tradeoff reasoning | |
+| Execution | Scope management, dealing with ambiguity, follow-through | |
+| Communication | Clarity, structure, listening skills | |
+| Stakeholder influence | Cross-functional examples, political savvy | |
+| Learning orientation | Self-awareness, what they'd do differently | |
+| Culture fit | Curiosity, team orientation, values alignment | |

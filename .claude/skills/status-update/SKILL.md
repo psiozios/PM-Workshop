@@ -868,3 +868,42 @@ If any check fails, revise before delivering.
 ---
 
 **Remember:** Great status updates make collaboration easier. They surface problems early, celebrate wins publicly, and keep everyone aligned without requiring meetings.
+
+---
+
+## Mode: Data Storytelling (--story)
+
+Use `/status-update --story` when you have metrics to share but need them to land as insights, not a spreadsheet dump. Numbers without narrative get ignored.
+
+**The data storytelling structure:**
+
+```
+## The Headline
+[Start with the "so what" — not the number, the meaning]
+"Activation is up. New users are reaching the aha moment 30% faster."
+Not: "D7 activation rate: 47% (up from 36%)"
+
+## The Data
+[Present the numbers after the insight — they support the story, not lead it]
+- D7 activation: 47% this month vs. 36% last month (+11pp)
+- Onboarding completion: 72% (up from 58%)
+- Time to first key action: 4.2 minutes (down from 6.1 minutes)
+
+## Why This Happened
+[The cause — connect the number to the work]
+"The onboarding checklist we shipped Jan 15 is driving this. Users who complete it activate at 2.3x the rate of those who don't."
+
+## What This Means
+[The implication — so what do we do next?]
+"This validates the bet on guided onboarding. Recommendation: accelerate the mobile onboarding redesign to apply the same pattern."
+
+## The Caveat
+[One sentence on what we don't know yet or what might complicate the picture]
+"Jan is historically our strongest activation month — we'll need Feb data to confirm this is structural, not seasonal."
+```
+
+**Data storytelling rules:**
+- Lead with insight, support with numbers
+- One key message per section — don't bury the lead in bullet 7
+- Call out what's missing or uncertain — credibility requires honesty
+- Connect the data to a decision or action — data for its own sake is noise

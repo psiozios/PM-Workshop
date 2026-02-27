@@ -397,3 +397,72 @@ Before delivering the launch checklist, verify:
 - [ ] **Customized to launch type** -- Small features have a streamlined checklist; major launches have expanded sections
 
 If any check fails, fix it before delivering. A launch checklist with missing owners or unclear dependencies creates false confidence.
+
+---
+
+## Mode: --testplan (Feature Test Plan)
+
+Use `/launch-checklist --testplan` to create a structured test plan for a feature before launch. Covers functional, edge case, regression, performance, and accessibility testing.
+
+```
+/launch-checklist --testplan
+
+Tell me:
+1. Feature name and brief description
+2. The core user flows (what users can now do)
+3. Any known edge cases or tricky scenarios
+4. What platforms or environments to test? (web, iOS, Android, API)
+
+I'll generate a test plan with scenarios, expected outcomes, and priority levels.
+Output: outputs/analyses/test-plan-[feature]-[date].md
+```
+
+### Test Plan Template
+
+```markdown
+# Test Plan: [Feature Name]
+
+**Launch date:** [date]
+**QA owner:** [name]
+**Environment:** [staging URL / test account]
+
+## Core Scenarios (must pass before launch)
+
+| Scenario | Steps | Expected result | Pass/Fail |
+|----------|-------|----------------|-----------|
+| Happy path — basic use | [Steps] | [Expected] | |
+| Happy path — power user | [Steps] | [Expected] | |
+
+## Edge Cases
+
+| Scenario | Steps | Expected result | Pass/Fail |
+|----------|-------|----------------|-----------|
+| Empty state | [Steps] | [Expected] | |
+| Maximum data limits | [Steps] | [Expected] | |
+| Error state / failure | [Steps] | Graceful error message | |
+| Concurrent actions | [Steps] | [Expected] | |
+
+## Regression Check
+
+What existing functionality might this break?
+| Area | Scenarios to retest | Pass/Fail |
+|------|---------------------|-----------|
+| [Related feature] | [Scenario] | |
+
+## Performance
+
+- Page load / response time: <[X]ms for P95
+- Large data sets: Test with [N] records / items
+- Concurrent users: [Target concurrent load]
+
+## Accessibility
+
+- [ ] Keyboard navigable
+- [ ] Screen reader tested (VoiceOver / NVDA)
+- [ ] Color contrast passes WCAG 2.1 AA
+- [ ] Focus indicators visible
+
+## Go / No-Go Criteria
+
+All P0 scenarios pass before launch. P1 scenarios pass or have documented workarounds.
+```

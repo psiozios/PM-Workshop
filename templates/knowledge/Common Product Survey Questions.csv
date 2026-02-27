@@ -1,0 +1,70 @@
+﻿Question,Comment,Options,Type
+It consists of four price sensitivity questions. See a comment.,"Four price sensitivity questions:
+1. At what price would you consider the product so expensive that you would not consider buying it?
+2. At what price would you consider the product to be priced so low that you would feel the quality couldn't be very good?
+3. At what price would you consider the product starting to get expensive, so that it is not out of the question, but you would have to give some thought to buying it?
+4. At what price would you consider the product a bargain - a great buy for the money?
+
+More: https://www.productcompass.pm/p/product-pricing-strategies-101","Provide a numeric scale with 5-7 options, based on a preliminary qualitative research",Van Westendorp survey (pricing)
+To what extent do you agree or disagree with the following statement? [Product/feature] made it easy for me to [complete task/solve problem],"• I used the 1-5 scale (https://www.productcompass.pm/i/143769960/tactic-simplify-scales).
+• I didn’t add “non-applicable” as we typically know a respondent used a specific feature, and it’s not a sensitive question.
+• Consider adding a question like “How can we improve?” depending on the answer or, better “Any additional feedback?” or “Anything else you would like to share?” for the entire survey. It’s a good way to gather qualitative insights.","• Strongly agree
+• Somewhat agree
+• Neither agree nor disagree
+• Somewhat disagree
+• Strongly disagree",CES (Customer Effort Score)
+"When using [product/feature] to [complete task/solve problem], how much effort did you personally have to put forth?","• I used the 1-5 scale (https://www.productcompass.pm/i/143769960/tactic-simplify-scales).
+• I moved the qualifier “When using” to the beginning of the second question (https://www.productcompass.pm/i/143769960/tactic-start-with-a-qualifier).
+• I didn’t add “non-applicable” as we typically know a respondent used a specific feature, and it’s not a sensitive question.
+• Consider adding a question like “How can we improve?” depending on the answer or, better “Any additional feedback?” or “Anything else you would like to share?” for the entire survey. It’s a good way to gather qualitative insights.","• Very low effort
+• Low effort
+• Moderate effort
+• High effort
+• Very high effort",CES (Customer Effort Score)
+"When [job step], how satisfied are you with your ability to [desired outcome]?","• I used the 1-5 scale (https://www.productcompass.pm/i/143769960/tactic-simplify-scales).
+• I suggested adding a “non-applicable” opt-out (https://www.productcompass.pm/i/143769960/tactic-provide-an-opt-out). Are you sure the respondents perform this job at all? Consider your specific context.
+• Consider adding a question like “Any additional feedback?” or “Anything else you would like to share?” for the entire survey.
+
+More: https://www.productcompass.pm/p/jobs-to-be-done-masterclass-with","• Not at all satisfied
+• Somewhat satisfied
+• Satisfied
+• Very satisfied
+• Extremely satisfied
+• [Non-applicable]",Jobs-to-be-Done Satisfaction
+How would you feel if you could no longer use [product]?,"How to interpret the results?
+• If 40% or more of respondents would be “very disappointed,” that’s a green light for moving full speed with your growth initiatives.
+• If 25%-40% of respondents would be “very disappointed,” you can experiment to tweak the product or its language.
+• If less than 25% of respondents would be “very disappointed,” your product requires significant development.
+
+More: https://www.productcompass.pm/i/135297088/q-when-to-ignite-growth","• Very disappointed
+• Somewhat disappointed
+• Not disappointed",Product-Market Fir survey
+"On a scale of 0-10, how likely are you to recommend [product/company] to a friend or colleague?","• Warning: NPS measures customer attitude and sentiment, not the actual behavior.
+• This is the standard NPS question, which uses an 11-point scale (0-10). While this doesn't follow the 5-point scale advice (https://www.productcompass.pm/i/143769960/tactic-simplify-scales), it’s the common format for NPS.
+• Consider adding a question like “How can we improve?” depending on the answer or, better “Any additional feedback?” or “Anything else you would like to share?” for the entire survey.",(Numeric scale),NPS (Net Promoter Score)
+Please rate your overall satisfaction with [product/feature].,"• I used the 1-5 scale (https://www.productcompass.pm/i/143769960/tactic-simplify-scales).
+• I suggested adding a “non-applicable” opt-out (https://www.productcompass.pm/i/143769960/tactic-provide-an-opt-out). Consider your specific context.
+• Consider adding a question like “How can we improve?” depending on the answer or, better “Any additional feedback?” or “Anything else you would like to share?” for the entire survey.","• Very satisfied
+• Somewhat satisfied
+• Neither satisfied nor dissatisfied
+• Somewhat dissatisfied
+• Very dissatisfied
+• [Non-applicable]",CSAT (Customer Satisfaction Score)
+"When [job step], how important is it to you that you can [desired outcome]?","• I used the 1-5 scale (https://www.productcompass.pm/i/143769960/tactic-simplify-scales).
+• I suggested adding a “non-applicable” opt-out (https://www.productcompass.pm/i/143769960/tactic-provide-an-opt-out). Are you sure the respondents perform this job at all? Consider your specific context.
+• Consider adding a question like “Any additional feedback?” or “Anything else you would like to share?” for the entire survey.
+
+More: https://www.productcompass.pm/p/jobs-to-be-done-masterclass-with","• Not at all important
+• Somewhat important
+• Important
+• Very important
+• Extremely important
+• [Non-applicable]",Jobs-to-be-Done Importance
+How did [product/feature] meet your expectations?,"• I used the 1-5 scale (https://www.productcompass.pm/i/143769960/tactic-simplify-scales).
+• I suggested adding a “non-applicable” opt-out (https://www.productcompass.pm/i/143769960/tactic-provide-an-opt-out). Consider your specific context.
+• Consider adding a question like “How can we improve?” depending on the answer or, better “Any additional feedback?” or “Anything else you would like to share?” for the entire survey.","• Extremely well
+• Very well
+• Moderately well
+• Slightly well
+• Not at all well
+• [Non-applicable]",CSAT (Customer Satisfaction Score)

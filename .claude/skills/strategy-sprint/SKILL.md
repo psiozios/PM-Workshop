@@ -335,7 +335,9 @@ Help me work through the appropriate framework step by step.
 ## Related Skills
 
 - `/prd-draft` - Turn strategy into PRDs
-- `/competitor-analysis` - Research competitors
+- `/competitor-analysis` - Research competitors (includes SWOT, Porter's Five Forces, PESTEL, Ansoff Matrix)
+- `/business-model-canvas` - Build a Business Model Canvas or Lean Canvas alongside your strategy (especially useful for 1-Day sprint on a new product or business model; canvas templates are in `templates/knowledge/`)
+- `/okr-planning` - Translate strategy into quarterly OKRs with measurable Key Results
 - `/user-research-synthesis` - Process customer insights
 - `context-library/strategy/jtbd-canvas.md` - Understand customer jobs
 - `context-library/strategy/7-powers-framework.md` - Identify unfair advantages

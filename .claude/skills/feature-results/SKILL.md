@@ -403,3 +403,26 @@ Before delivering the feature results doc, verify:
 - [ ] **Learnings** include at least one "apply elsewhere" insight
 - [ ] **No corporate jargon** -- results are written in plain, direct language
 - [ ] **Linked to original PRD** and any related experiments
+
+---
+
+## Mode: --edit (Revise Existing Results Doc)
+
+Use `/feature-results --edit` to revise or strengthen an existing feature results document. Paste the current doc and tell me what needs to change.
+
+```
+/feature-results --edit
+
+Paste your existing feature results doc and tell me:
+1. What's changed? (new data came in, stakeholder feedback, different interpretation)
+2. What specifically do you want me to fix? (verdict, executive summary, root cause section, etc.)
+3. Who's the new audience? (if tone or framing needs adjustment)
+
+I'll revise the specific section — not rewrite the whole doc.
+```
+
+**Common --edit use cases:**
+- Data came in after first draft — add new metrics without disrupting existing narrative
+- Verdict changed (was "iterate" → now "kill") — update recommendation and rationale
+- Executive review feedback — strengthen the so-what or simplify for leadership audience
+- Missed a metric — add a guardrail or secondary metric that wasn't initially tracked

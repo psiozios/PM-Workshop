@@ -788,3 +788,45 @@ When the PM uses `/meeting-agenda`, I automatically:
 - After meeting: Use `/meeting-notes` to capture outcomes
 - Multiple meetings: Use `/meeting-cleanup` at end of day
 - Decision made in meeting: Route to `/decision-doc` if it needs formal documentation
+
+---
+
+## Mode: --oneonone (Structured 1:1 Agenda)
+
+Use `/meeting-agenda --oneonone` for structured 1:1s. 1:1s fail when they become status updates. This mode keeps them focused on growth, blockers, and relationship.
+
+**Subtypes:** `--oneonone manager` / `--oneonone report` / `--oneonone skip` / `--oneonone stakeholder`
+
+### Manager 1:1 Template (25-30 min)
+
+```
+Agenda: Weekly 1:1 — [Your Name] + [Manager Name]
+
+## My wins (5 min)
+[1-2 things that went well — progress, not just motion]
+
+## What I need from you (10 min)
+[Your most important ask, blocker, or decision needing input]
+- [Item 1 — specific ask]
+- [Item 2 if applicable]
+
+## Career + growth (5 min — rotate topics each week)
+Topics to rotate: feedback on recent work / skills developing / growth goals / expectations check-in
+
+## Their priorities + what they need from me (5 min)
+[Space for your manager to share — don't skip this]
+
+## Blockers needing escalation (5 min)
+[Anything requiring a decision that's blocking you]
+```
+
+### Direct Report 1:1 Template (25 min)
+
+```
+## Their wins (5 min — ask first, creates safety)
+## Their blockers (10 min — your job is to unblock)
+## Feedback (5 min — specific, behavior-based, not generic)
+## Growth (5 min monthly — what are they working to get better at?)
+```
+
+**Anti-patterns:** Status report that could be email / no agenda / no follow-through on prior items / skipping when "things are good" (that's when relationship-building matters most)

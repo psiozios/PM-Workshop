@@ -602,3 +602,50 @@ Before delivering the activation analysis, verify:
 **Framework credit:** Adapted from Aakash Gupta's activation frameworks. Read the full articles:
 - https://www.news.aakashg.com/p/ultimate-guide-activation
 - https://www.news.aakashg.com/p/how-to-measure-onboarding-advanced
+
+---
+
+## Mode: --debug (Rapid Activation Drop Investigation)
+
+Use `/activation-analysis --debug` when activation just dropped and you need answers fast. This is triage, not a full analysis.
+
+```
+/activation-analysis --debug
+
+Tell me:
+1. What's the specific metric and how much did it drop? (D7 activation, 42% → 31%)
+2. When did it start? (specific date or event)
+3. What changed around that time? (deploy, copy change, pricing change, new traffic source)
+4. Any segment data? (new vs existing users, device, geography, acquisition channel)
+
+I'll run a structured triage and identify the most likely causes in 5 minutes, not 5 days.
+```
+
+### Activation Debug Triage (5-step)
+
+```
+Step 1: Confirm the data
+- Is the drop real or a tracking issue? (event volume, data pipeline status)
+- Same drop in all analytics tools or just one?
+
+Step 2: Time-box the cause
+- Did it drop suddenly (deploy) or gradually (drift)?
+- What's the exact date the drop started?
+
+Step 3: Segment the drop
+- Is it all users or a subset? (new users only, mobile only, specific traffic source)
+- If new users only → acquisition or onboarding change
+- If all users → product change or infrastructure issue
+- If specific channel → that channel's quality or targeting changed
+
+Step 4: Correlate with changes
+- What was deployed that day or the 3 days before?
+- Any external events (pricing, competitor announcement, press)?
+
+Step 5: Hypothesis ranking
+- [Most likely cause] — test by [specific data pull]
+- [Second most likely] — test by [specific data pull]
+- [Third] — test by [specific data pull]
+```
+
+**Output:** Rapid triage summary with top 3 hypotheses ranked by probability. Follow with full `/activation-analysis` if the issue is systemic, not just a regression.

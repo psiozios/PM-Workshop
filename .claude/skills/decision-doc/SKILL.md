@@ -889,3 +889,79 @@ Before presenting output to the PM, verify:
 - [ ] **Stakeholders who need to sign off are named:** Specific people (not roles) are listed as approvers, contributors, and informed parties
 - [ ] **Reversibility assessment included:** The document explicitly states whether this is a one-way door or two-way door decision, with reasoning
 - [ ] **Conflicts with existing strategy or past decisions flagged:** Any tension with decisions in `context-library/decisions/` or goals in `context-library/strategy/` is called out with explanation of how the conflict is resolved
+
+---
+
+## Mode: --deliberate (Pre-Decision Deliberation)
+
+Use `/decision-doc --deliberate` before you know your recommendation. This mode helps you think through the options, not document what you've already decided.
+
+**When to use:** You have a hard decision, competing pressures, and aren't sure which way to go. Use this mode to work through it, then switch to the standard `decision-doc` output to document the conclusion.
+
+```
+## Deliberation: [Decision Question]
+
+### What I know for sure
+[Facts, data, constraints that are not in dispute]
+
+### What I believe but can't prove
+[Assumptions I'm relying on — flag these explicitly]
+
+### The options as I see them
+1. [Option A] — [2 sentences on what this path looks like]
+2. [Option B]
+3. [Option C if applicable]
+
+### Pressure mapping
+For each option, who is pushing for it and why? What might be influencing their position?
+- [Stakeholder]: wants [Option X] because [their actual reason, not just stated reason]
+- [Stakeholder]: wants [Option Y] because...
+
+### What I'm most afraid of getting wrong
+[The failure mode I'm most worried about — often reveals the real risk]
+
+### What I'd tell a peer
+[If a fellow PM described this situation, what would I recommend? Getting outside your own head often clarifies.]
+
+### My current lean
+[Option X] — because [1-2 honest reasons]
+[What would change my mind:]
+
+### What I need before I can decide
+[Data / stakeholder conversation / research / design spike that would resolve my uncertainty]
+```
+
+**Cross-skill:** After deliberating, run `/decision-doc` to formalize and communicate the final decision.
+
+---
+
+## Mode: --brainstorm (Option Generation)
+
+Use `/decision-doc --brainstorm` when you've framed the decision but aren't sure you've considered all the options.
+
+```
+## Brainstorm: Options for [Decision Question]
+
+**Constraints (real constraints only — don't over-constrain):**
+- [Constraint 1]
+- [Constraint 2]
+
+**Options generated:**
+
+Obvious options:
+1. [What everyone would suggest first]
+2. [The second obvious path]
+
+Less obvious options:
+3. [What if we did the opposite of option 1?]
+4. [What if we deferred / did nothing?]
+5. [What if we did a dramatically smaller version?]
+6. [What would the boldest possible version look like?]
+7. [What would someone outside our industry suggest?]
+
+Hybrid options:
+8. [Combination of 1 and 3]
+9. [Phased approach: do X now, decide Y later]
+
+**Gut check:** Which of these options, if it worked, would create the best outcome? Start there.
+```

@@ -450,3 +450,71 @@ Before delivering prototype feedback, verify:
 - [ ] **Previous feedback rounds referenced** -- If this is round 2+, confirm previous issues were resolved
 
 If any check fails, fix it before delivering. Generic feedback wastes iteration cycles.
+
+---
+
+## Mode: Visual Design Critique (--design)
+
+Use `/prototype-feedback --design` for focused visual design feedback — not UX/usability, but the visual layer: layout, hierarchy, spacing, color, typography, and consistency.
+
+```
+/prototype-feedback --design
+
+Paste a screenshot, Figma link, or describe what you see.
+Tell me: what's the context (new feature, redesign, marketing page) and who's the primary user.
+
+I'll apply visual design critique across 5 dimensions.
+```
+
+### Visual Design Critique Framework
+
+**1. Visual Hierarchy**
+- Does the most important element command the most attention?
+- Is there a clear primary → secondary → tertiary reading order?
+- Does size, weight, and contrast guide the eye to the right place?
+
+**2. Spacing and Layout**
+- Is there consistent spacing (4px/8px grid system)?
+- Are related elements grouped? Unrelated elements separated?
+- Is there enough whitespace? (Too tight = overwhelming. Too loose = disconnected.)
+
+**3. Typography**
+- Maximum 2-3 type styles in use (not 5+ variations)
+- Font sizes appropriate for reading distance and device
+- Line length readable (45-75 characters per line for body text)
+
+**4. Color**
+- Does color communicate meaning, not just aesthetics?
+- Sufficient contrast ratios for accessibility (4.5:1 for body text, 3:1 for large text)
+- No more than 3-4 primary colors in use
+
+**5. Consistency**
+- Does this match the design system?
+- Are interactive elements (buttons, links, inputs) visually consistent?
+- Are similar things styled the same way?
+
+### Design Critique Output Format
+
+```
+## Visual Design Critique: [Feature / Screen]
+
+### Strongest elements
+[What's working well — be specific]
+
+### Issues by severity
+
+**High (fix before launch):**
+- [Issue]: [What it is] → [How to fix it]
+
+**Medium (address in next iteration):**
+- [Issue]: [What it is] → [How to fix it]
+
+**Low (nice to have):**
+- [Issue]: [What it is] → [Suggestion]
+
+### Accessibility flags
+- [Any contrast or readability issues]
+
+### Design system consistency
+- [What aligns] / [What diverges and whether it should]
+```

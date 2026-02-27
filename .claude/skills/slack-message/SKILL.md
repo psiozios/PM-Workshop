@@ -584,3 +584,46 @@ Before presenting output to the PM, verify:
 - [ ] **No corporate jargon or banned words:** The message does not contain "delve," "leverage," "utilize," "unlock," "harness," "synergize," or other banned words from the writing style guide
 - [ ] **Length appropriate for Slack:** The main message is 5 sentences or fewer; any additional detail is suggested as a thread reply or linked document
 - [ ] **Stakeholder communication style referenced:** If the recipient has a profile in `context-library/stakeholder-template.md`, their communication preferences (detail level, format, priorities) are reflected in the message
+
+---
+
+## Additional Modes
+
+### --thread (Thread Summary)
+Summarize a long Slack thread into a crisp TL;DR for someone who missed it.
+
+```
+/slack-message --thread
+
+Paste the thread. I'll produce:
+- TL;DR (1-2 sentences)
+- Key decisions made
+- Action items + owners
+- What's still open / what needs a decision
+```
+
+### --difficult (Difficult Conversation)
+Draft a message for a sensitive situation — delivering bad news, pushing back, managing conflict, or saying no.
+
+```
+/slack-message --difficult
+
+Tell me:
+1. Who is this to and what's the relationship?
+2. What's the situation? (what happened, what needs to be said)
+3. What's the ideal outcome of the message?
+
+I'll draft something that's direct without being harsh, honest without being inflammatory, and clear about the ask without being presumptuous.
+
+Principles: Lead with the relationship, not the grievance. State the impact, not the blame. Make the ask, not the ultimatum.
+```
+
+### --translate (Audience Translation)
+Rewrite an existing message for a different audience — turn a technical update into an exec summary, or a formal email into a Slack message.
+
+```
+/slack-message --translate
+
+Paste the original message + tell me: who wrote it, who it was for, and who the new audience is.
+I'll rewrite it in the right voice, length, and level of detail for the new reader.
+```

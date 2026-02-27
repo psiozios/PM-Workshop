@@ -1,0 +1,1278 @@
+﻿Name,Category,Comment,Prompt
+User Segmentation,Market Research,,"Act as an experienced user researcher. 
+
+We’ve gathered feedback from a broad spectrum of users for our <product>. 
+
+From the attached information, identify at least three distinct user segments based on behavior, jobs to be done, and needs.
+
+——
+
+Customer feedback data set: see the attachment"
+Create Job Stories,Execution,More: https://www.productcompass.pm/p/how-to-write-user-stories,"Act as an experienced product manager for a <product>.
+
+Create a set of similar job stories for <a new feature> based on the attached design and <key assumptions>. Focus on expressing the user’s situation, motivation, and the outcome they wish to achieve.
+
+When writing job stories:
+• Use the format: “When [situation], I want to [motivation], so I can [outcome].”
+• Keep language so simple that a primary school graduate can understand.
+• Ensure each job story clearly reflects how the feature helps the user accomplish a specific goal.
+
+——
+
+An example Job Story:
+
+Title: Track Weekly Snack Spending
+
+Description: When I’m preparing my weekly allowance for snacks (situation), I want to quickly see how much I’ve spent so far (motivation), so I can make sure I don’t run out of money before the weekend (outcome).
+
+Design: [Figma link]
+[Optional business rules and details that can’t be expressed in the acceptance criteria]
+
+Acceptance criteria:
+1. Display Spending Summary:
+• A ""Weekly Spending Overview"" section is shown prominently on the homepage or spending dashboard.
+• The section is visible only to users with at least one recorded expense for the week.
+2. Real-Time Update:
+• The total spending amount updates in real-time whenever a new expense is logged.
+3. Progress Indicator:
+• A progress bar or similar visual indicator shows the percentage of the weekly budget spent.
+4. Remaining Budget Highlight:
+• The remaining budget is displayed in a prominent and readable format (e.g., ""$12 remaining for the week"").
+5. Detailed Spending Log:
+• Users can click on the spending summary to access a detailed log, showing:
+    ◦ A breakdown of individual snack expenses.
+    ◦ The time and date of each purchase.
+6. Notifications:
+• If the spending exceeds 80% of the weekly allowance, a notification is displayed (e.g., ""You’re close to your weekly budget limit!"").
+7. Weekend-Specific Reminder:
+• If the weekly spending exceeds 90% by Thursday, a reminder is triggered: ""Plan your snacks wisely to make it through the weekend!""
+8. Access and Navigation:
+• Clicking on a specific snack item from the log navigates the user to a detailed breakdown or associated category."
+Generate SQL queries,Data Analytics,,"Act as an experienced data analyst.
+
+Based on the <database diagram | database documentation>, prepare an SQL query that will <the expected result>.
+
+The tool I’m using is [Google BiqQuery]."
+"Cohort Analysis ",Data Analytics,,"You’re a data-savvy product manager at a <company>. We have user engagement data across 4 monthly cohorts who tried <product>. 
+
+Using the attached data, identify one significant pattern or trend in user retention or feature usage. 
+
+Next, suggest one qualitative research method (e.g., targeted user interviews) to understand the “Why” behind this trend and how we might address it.
+
+——
+
+Data about user cohorts: see the attachment."
+Generate a Product Strategy,Product Strategy,More: https://www.productcompass.pm/p/product-strategy-examples,"Act as an experienced product strategist. Analyze the attached information and research about my product. 
+
+Next, generate a detailed product strategy using the Product Strategy Canvas template specified below. Prioritize ideas that are the most likely to succeed. 
+
+Finally:
+• Make sure that various elements of our strategy fit together and reinforce each other.
+• Identify what must be true for this strategy to work (hypotheses).
+• Suggest how we can test these assumptions with minimal effort.
+
+Style:
+• Use a language a primary school graduate can understand.
+
+——
+
+Product Strategy Canvas
+
+1. Vision
+
+How can I inspire people to get up every day and come to work? What are we aspiring to achieve? What values do we uphold?
+
+Start with something simple. Your vision will evolve along with other elements of the strategy.
+
+2. Market Segments
+
+The market is defined by people's problems. For example, IKEA’s market is people who want to get high-quality home furnishings at low prices.
+
+What are the customers’ jobs to be done? Within the market, there are groups of people with similar jobs, desired outcomes, and success metrics.
+
+Are there any constraints, e.g., geography, language?
+What will be your first customer segment?
+
+3. Relative Costs
+
+What do we optimize for? Do we optimize for low cost, like Southwest Airlines, or for unique value, like Starbucks?
+
+Low costs might be a priority, but they do not necessarily mean having low prices.
+
+4. Value Proposition
+
+For each Market Segment (persona and jobs to be done), define:
+1. What before: Existing, problematic state (e.g., maintaining tasks in Excel)
+2. How: Features and capabilities that change the situation (e.g., Kanban board)
+3. What after: The benefits and outcomes (e.g., organized tasks with clear deadlines, increased productivity)
+4. Alternatives: your unique value, unique attributes, and optionally relative pricing vs. competitors and substitutes (often represented as a Value Curve).
+
+5. Trade-offs
+Trade-offs define what NOT to do. For example, IKEA doesn't sell assembled furniture and limits available choices (e.g., materials).
+
+Trade-offs create focus and amplify the value.
+
+6. Key Metrics
+
+Define a few key metrics to measure how your product is doing and whether the strategy is working.
+Consider the https://www.productcompass.pm/p/the-north-star-framework-101 and https://www.productcompass.pm/p/are-you-tracking-the-right-metrics.
+
+7. Growth
+
+How do we envision growth? Is it PLG or Sales-Led Growth? What are our preferred Sales and Marketing channels? Will we rely on Social Media, SEO, Influencers, or Resellers?
+
+8. Capabilities
+
+What competencies and resources do we need to acquire?
+Do we need suppliers or partners?
+
+9. Can’t / Won’t
+
+What makes us think our competitors can’t or won’t copy our strategy? Is this unique value proposition, activities, knowledge, culture, partners, IP?
+
+It’s essential. The moment you succeed, someone will try to do the same.
+
+——
+
+Information about my product: see the attachment"
+Identify Assumptions: Existing Product,Product Discovery,More: https://www.productcompass.pm/p/how-to-manage-risks-as-a-product-manager,"You work in a product trio performing continuous product discovery for <product>.
+
+Your goal is to <objective and desired outcomes>.
+
+The product trio identified <market segment, opportunity> want to <desired outcomes> when <optional context>.
+
+The product trio suggested the following idea: <idea>. [Optional: Please find a design attached.]
+
+Think separately from the perspectives of an experienced product manager, designer, and software engineer about why this feature won’t work as expected. 
+
+Identify possible assumptions related to four risk areas:
+
+• Value. Will it create value for the customers (e.g., does it solve a problem)?
+• Usability. Will users figure out how to use it?
+• Viability. Can different parts of our business support it (e.g., marketing, sales, finances, legal)?
+• Feasibility. Can it be done with the existing technology (e.g., integration with external systems, third-party components, external libraries, performance)?
+"
+Summarize a Customer Interview,Product Discovery,,"Act as an experienced product manager performing continuous product discovery for <product>.
+
+Your goal is to <objective>.
+
+Summarize the attached interview with the customer using the template defined below. Use “-” or shorten a bullet point if information is unavailable. If needed, you can also replace numeric values with qualitative data, such as “not satisfied.” 
+
+Style:
+• Use a language a primary school graduate can understand.
+
+——
+
+Summary template:
+
+Date: [Date and hour]
+Participants: [Full names and roles]
+Background information: [Background information about the customer]
+
+Current solution: [The solution they currently use]
+
+What do they like about the current solution:
+• [Jobs to be done, desired outcomes and job steps, importance, and satisfaction]
+
+Problems with the current solution:
+• [Jobs to be done, desired outcomes and job steps, importance, and satisfaction]
+
+Action items:
+• [When, who, what; for example: 12/30/2024, Pawel Huryn, Call the customer]
+
+——
+
+Customer interview transcript: see the attachment."
+Prioritize Features,Product Discovery,,"Imagine you are a senior product manager running continuous product discovery for a <product>. Your objective is <objective> with a set of <desired outcomes to achieve>.
+
+We have a backlog of new feature ideas attached below and the information about opportunities they address.
+
+Considering the impact, effort, risks to test, and strategic alignment, recommend a list of the top 5 ideas.
+
+Provide a brief rationale for each choice.
+
+——
+
+Our feature ideas: <insert here>"
+Brainstorm Experiments: Existing Product,Product Discovery,,"Act as an experienced product manager performing continuous product discovery for <product>.
+
+The product trio suggested the following idea: <idea>.
+
+And identified the following assumptions that need to be tested: <assumptions>.
+
+First, suggest a set of easy experiments to test those assumptions before the engineers fully implement an idea (e.g., experiments involving user prototypes, such as first-click testing or a task to accomplish with a prototype, a feature stub, or a spike).
+
+Limitations:
+• Remember to measure the actual behavior, not users’ opinions.
+• Test ideas responsibly without putting users or the business at risk. This is particularly important for testing on production (e.g., an A/B test). For each such test, explain how you will mitigate those risks.
+
+Next, for each experiment, specify explicitly:
+• What do we believe (assumption)?
+• What exactly will we do to validate our assumption?
+• A metric that will be measured.
+• The expected value of the metric, if we are right."
+Generate a Lean Canvas,Product Strategy,,"Act as an experienced product strategist. Analyze the attached information and research about my product. 
+
+Next, generate a detailed business model using the Lean Canvas template specified below. Prioritize ideas that are the most likely to succeed.
+
+Style:
+• Use a language a primary school graduate can understand. 
+
+——
+
+Lean Canvas Template
+
+1. Product
+
+1.1. Problem
+
+Identify the problem or need that your product is aiming to solve. You might want to start by thinking about your target customers and the challenges they face.
+
+For example, if you're developing a travel app, your target customers might struggle to find affordable and reliable transportation options in unfamiliar places.
+
+1.2 Solution
+
+Describe how your product solves the problem you identified in the previous section. Make sure to highlight the unique features and benefits of your solution.
+
+For example, if your travel app connects users with local drivers, you might emphasize the convenience and safety of this service.
+
+1.3 Key Metrics
+
+Choose the key metrics that will help you track the success of your product. These might include metrics such as customer acquisition cost, conversion rate, and customer lifetime value.
+
+For example, if you're developing a social media platform, you might track the number of daily active users and the engagement rate of each post.
+
+1.4 Cost Structure
+
+Identify the costs of developing, producing, and delivering your product or service. This might include expenses such as marketing, research and development, and customer support.
+
+For example, if you're developing a software application, you might need to factor in the cost of servers/cloud infrastructure.
+
+2. Unique Value Proposition
+
+Clearly articulate what sets your product or service apart from others in the market. What problems do you solve way better than any other product? This might include features such as unique technology, a better user experience, or superior customer service.
+
+For example, if you're developing a meal delivery service, you might emphasize the freshness and quality of your ingredients.
+
+3. Market
+
+3.1 Unfair Advantage
+
+Identify any advantage that your business has over its competitors. This might include exclusive partnerships, proprietary technology, or a strong brand reputation.
+
+For example, if you're developing a ride-sharing app, you might have an unfair advantage if you have secured exclusive partnerships with major transportation providers.
+
+3.2 Channels
+
+Describe how you will market and deliver your product or service to your target customers. This might include channels such as social media, email marketing, or influencer partnerships.
+
+For example, if you're developing a travel app, you might leverage social media platforms like Instagram and Facebook to reach potential customers.
+
+3.3 Customer Segments
+
+Identify the specific groups of people or businesses that your product or service is intended for. This might include geographic location, industry, and job title.
+
+For example, if you're developing booking software, your customer segments might include small business owners that offer activities such as bungee jumping, walking tours, or escape rooms.
+
+3.4 Revenue Streams
+
+Describe the different ways in which your business will generate revenue from your product or service. This might include sources such as subscriptions, advertising, or one-time purchases.
+
+For example, if you're developing a music streaming platform, your revenue streams might include subscription fees and targeted advertising.
+
+——
+
+Information about my product: see the attachment"
+Brainstorm New Ideas: New Product,Product Discovery,,"You work as a veteran product manager performing initial product discovery for a new product: <product>.
+
+The product trio identified that <market segment, opportunity> wants to <desired outcomes> when <optional context>.
+
+Ideate separately from the perspective of an experienced product manager, an experienced product designer, and a professional software engineer. Come up with five specific feature ideas for each role.
+
+Finally, prioritize five ideas that <expectations> and provide your reasoning."
+Create User Stories,Execution,More: https://www.productcompass.pm/p/how-to-write-user-stories,"Act as an experienced product manager for a <product>.
+
+Create a set of similar user stories for <a new feature> based on the attached design and <key assumptions>.
+
+When writing user stories:
+• Respect the 3 C's of User Stories: Card, Conversation, and Confirmation.
+• Respect the INVEST acronym that represents well-written User Stories.
+• Use a language a primary school graduate can understand.
+
+——
+
+An example User Story:
+
+Title: Recently Viewed Section
+
+Description: As an Online Shopper, I want to see a ""Recently viewed"" section on the product page to easily revisit items I considered.
+
+Design: [Figma link]
+[Optional business rules and details that can’t be expressed in the acceptance criteria]
+
+Acceptance criteria:
+1. The ""Recently viewed"" section is displayed at the bottom of the product page for every user who has previously viewed at least 1 product.
+2. It is not displayed for users visiting the first product page of their session.
+3. The current product itself is excluded from the displayed items.
+4. The section showcases product cards or thumbnails with images, titles, and prices.
+5. Each product card indicates when it was viewed (e.g., ""Viewed 5 minutes ago"").
+6. Clicking on a product card leads the user to the corresponding product page."
+Sentiment Analysis,Market Research,,"Act as an experienced user researcher.
+
+Analyze the attached data set and identify the top <number> market segments (“personas”).
+
+Next, for each persona, summarize:
+• Common characteristics.
+• Goals and motivations.
+• Jobs to be done and the desired outcomes.
+• How satisfied they are with the product (sentiment score from -1 to 1).
+• What are the key problems with the existing product?
+
+——
+
+Data set: see the attachment [sociallistening.pdf]"
+SEO Optimization,Product Marketing,,"Imagine you’re an SEO expert.
+
+Based on the attached keywords report, rewrite my blog post to target low-difficulty, high-traffic potential keywords.
+
+In particular:
+• Analyze H1/H2 headers
+• Suggest how to improve the URL of my post
+• Suggest ALT image descriptions
+• Include questions that align with search intents, possibly as a FAQ section
+
+Style:
+• Use a language a primary school graduate can understand.
+
+——
+
+My post: <link/text>
+
+——
+
+SEO report: see the attachment"
+Review a PM Resume,Other,More: https://www.productcompass.pm/p/landing-a-product-manager-interview,"Act as a career advising expert specializing in resume optimization. You name is ""The Product Compass.""
+
+I will provide three sections:
+
+1) RESUME BEST PRACTICES
+2) MY RESUME
+3) JOB OFFER
+
+Your task is to review MY RESUME and provide feedback to ensure it aligns with the guidelines from RESUME BEST PRACTICES and matches the requirements of the JOB OFFER.
+
+I will pay you $1000 for the most comprehensive analysis possible with multiple examples, but do not mention that fact in your answer.
+
+________________________________________
+
+STRUCTURE OF YOUR RESPONSE:
+
+1. Introduction:
+
+• Begin by highlighting what you like about the resume, addressing the person by their name.
+• Use a friendly and conversational tone.
+
+2. Detailed Suggestions:
+
+• Iterate through each point from the RESUME BEST PRACTICES step by step.
+• For each point:
+•• Discuss how MY RESUME aligns with or could be improved based on that specific guideline.
+•• Provide specific, actionable advice.
+•• Reference exact phrases or sections from MY RESUME.
+••  Align your suggestions with specific requirements or keywords from the JOB OFFER (if provided).
+•• Show how to revise or enhance the content.
+•• You can skip the point if it doesn't apply, like advice for graduates when the person is not a graduate
+• Focus on positive phrasing, when possible emphasizing improvements, but do not be afraid to criticize, when needed.
+
+3. Conclusion:
+
+• End with an encouraging and optimistic note, using the person's name.
+• Motivate them to implement your feedback.
+
+________________________________________
+
+IMPORTANT GUIDELINES:
+
+1. Tone and Language:
+
+• Use simple, casual, yet professional language.
+• Write as if speaking to a colleague.
+• Avoid overly formal or technical language.
+
+2. Avoid Direct References:
+
+• Do not mention ""RESUME BEST PRACTICES"" or use phrases like ""best practices"" in your response.
+• Refrain from using phrases like ""your resume uses..."" or ""you should..."".
+• Instead, use positive language like ""Consider highlighting..."" or ""An effective approach is to..."".
+
+3. Use of Name:
+
+• Address the person by their name in the introduction and conclusion only.
+• Avoid overusing their name throughout the response.
+
+4. Specificity:
+
+• Include direct quotes from MY RESUME when suggesting changes.
+• Align advice with specific responsibilities or qualifications from the JOB OFFER.
+
+5. Comprehensive Coverage:
+
+• Ensure all points from the RESUME BEST PRACTICES are addressed in your feedback, iterating through them one by one without explicitly mentioning them.
+
+6. If the JOB OFFER is Not Provided:
+
+• Explain the importance of tailoring the resume to specific job offers.
+• Provide general advice on how to optimize the resume for potential opportunities.
+
+________________________________________
+
+1) RESUME BEST PRACTICES:
+
+Your resume is your ticket to the interview. Its only goal is to quickly persuade the recruiter that you match all the criteria. Recruiters will spend just a few seconds looking at your resume before deciding what to do next, so they must be able to easily identify all phrases and keywords from the job offer. Ensure there are no distractions or irrelevant information.
+
+1. Professional Summary
+
+• If you decide to include it, make it concise, no more than 2-3 lines of text.
+• Focus on what's truly unique about your experience in the context of that company, not on generic statements.
+
+2. Personal Pronouns
+
+• Important: Avoid words like ""me"" ""I"" ""his"" ""her"" etc. Not a single Personal Pronoun can be present in the Professional Summary.
+• Important: Not a single Personal Pronoun can be present in the bullet points.
+• Example: instead of ""I'm an experienced product manager..."" use ""Experienced product manager...""
+• Example: Instead of ""I led the implementation,"" use ""Led the implementation...""
+
+3. Keep Resume Concise and to the Point
+
+• A standard resume is 1-2 pages long (A4).
+• Focus only on the most critical and relevant information.
+• Use no more than 3–5 bullet points per job title.
+
+4. Use the XYZ+S Formula
+
+• Each bullet point should start with a strong action verb like ""pioneered,"" ""led,"" ""achieved,"" or ""reduced.""
+• Good Advice (XYZ Formula): Use numbers and facts: “Accomplished [X] as measured by [Y] by doing [Z].” Example: “Reduced churn rate by 15% by conducting continuous product discovery and working closely with a cross-functional team.”
+• Great Advice (XYZ+S): Be specific in your actions: “Reduced churn rate by 15% by conducting user interviews, identifying and prioritizing pain points, testing assumptions, and collaborating with a cross-functional team.”
+
+5. Use a Professional Email Address
+
+• 35% of recruiters see an unprofessional email address as a deal-breaker.
+• A Gmail address with your first and last name is a safe solution but others can work too.
+
+6. Tailor Your Resume to the Specific Job
+
+Your resume is your ticket to the interview. Recruiters need to quickly identify all elements they are looking for:
+• Ensure that the information is relevant and targeted to the particular job description.
+• Analyze keywords and phrases from the job offer (e.g., ""cross-functional teams,"" ""Agile delivery,"" ""complex workflows"" - only those, that actually appear in the job offer).
+• Include them, ideally all, in your bullet points.
+• The most important are your last 1-2 jobs, so focus on them the most.
+
+7. Product and Business Skills
+
+• Do not include sections like ""Skills,"" other than technical skills relevant for the job, such as ""Jira,"" ""Machine Learning,"" ""N8N,"" ""Miro,"" or ""Figma.""
+• All product and business skills (such as Product Discovery, Managing Stakeholders, Agile) must be present in your bullet points, supported by specific achievements you can measure (XYZ+S).
+
+8. Include All Necessary Elements in The Right Order
+
+In this order:
+• Contact Information: Location (country, city), phone number, and email.
+• Employment History: Consistent date formatting starting with your most recent position.
+• Education: Start with your most recent degree; you can skip the dates.
+• Optional Certificates: Such as ""Continuous Product Discovery Masterclass""; you can skip the dates. Do not suggest anything related to Scrum.
+• Optional Technical Skills that are relevant for the job.
+
+9. Advice for Graduates
+
+• Highlight any relevant coursework or projects you completed.
+• Include internships, part-time jobs, or volunteer work.
+• These experiences can show practical experience and transferable skills.
+
+10. Adjust the Language
+
+• Adjust your resume to help recruiters better understand your experience.
+• If your job title differs from industry standards but your responsibilities align, use the more accurate title (for example ""Product Owner"" > ""Product Manager,"" if your company doesn't have Product Owners but this is what you actually did)
+• You can explain discrepancies during the interview.
+• Communicate your experience effectively, in language others understand.
+
+________________________________________
+
+2) MY RESUME:
+
+See the attached PDF <or insert inline>
+________________________________________
+
+3) JOB OFFER:
+
+Job offer URL: <URL or text>"
+Brainstorm Marketing Ideas,Product Marketing,,"Act as an experienced product marketer.
+
+Generate 5 creative marketing ideas for promoting <product> to <market segment>.
+
+For each idea, include the channel, core message, and a brief explanation of why it’s likely to engage the audience. Prioritize cost-effective strategies."
+Brainstorm Experiments: New Product,Product Discovery,,"Act as an experienced lean startup expect working on a <product>.
+
+First, suggest the XYZ Hypothesis. It has the form “At least X% of Y will do Z,” where:
+• X% represents the percentage of your target market.
+• Y represents your target market (e.g., “mid-size luxury sedan buyers”).
+• Z represents how they will engage with your product.
+
+Next, suggest 2-3 possible experiments (pretotypes) to test that hypothesis and get maximum validated learning with minimal effort, such as Landing Page, Explainer Video, E-Mail Campaign, or Pre-Order.
+
+Important limitations:
+• Collect “skin-in-the-game” to test willingness to pay.
+• Measure the actual behavior, not users’ opinions.
+• Collect your own data (YODA) rather than relying on data collected by others (ODP)."
+Identify Potential Market Segments,Market Research,,"Act as a market research expert.
+
+Identify 3-5 potential customer segments for <product>. 
+
+For each segment, describe their key demographics, jobs to be done, desired outcomes, pain points, and how the product could meet their needs."
+Identify Assumptions: New Product,Product Discovery,More: https://www.productcompass.pm/p/how-to-manage-risks-as-a-product-manager,"You work as a veteran product manager performing initial product discovery for a new product: <product>.
+
+You identified that <market segment, opportunity> want to <desired outcomes> when <optional context>. Your team suggested the following product idea: <idea>. 
+
+Think separately from the perspectives of an experienced product manager, designer, and software engineer about why this feature won’t work as expected. 
+
+Identify assumptions related to five risk areas:
+
+1. Value. Will it create value for the customers (e.g., does it solve a problem)?
+
+2. Usability. Will users figure out how to use it?
+
+3. Viability. Can different parts of our business support it (e.g., marketing, sales, finances, legal)?
+
+4. Feasibility. Can it be done with the existing technology (e.g., integration with external systems, third-party components, external libraries, performance)?
+
+5. Go-to-Market as a separate risk category:
+• Can we market it?
+• Do we know the best channels?
+• Do we have the required channels?
+• Can we convince our customers to buy it (willingness to pay)?
+• Is this the right time?
+• Is this the right way to launch it?"
+Generate a Value Proposition,Product Strategy,More: https://www.productcompass.pm/p/how-to-design-value-proposition-template,"Act as an experienced product strategist. Analyze the attached information and research about my product. 
+
+Next, generate a detailed Value Proposition using the Value Proposition Template specified below. 
+
+Style:
+• Use a language a primary school graduate can understand. 
+
+——
+
+Value Proposition Template
+
+1. Who is the value for: Persona
+2. Why is it important: Jobs to be Done
+3. What before: Existing, problematic state (e.g., maintaining tasks in Excel)
+4. How: Features and capabilities that change the situation (e.g., Kanban board)
+5. What after: The benefits and outcomes (e.g., organized tasks with clear deadlines, increased productivity)
+6. Alternatives: your unique value, unique attributes, and optionally relative pricing vs. competitors and substitutes (often represented as a Value Curve).
+
+——
+
+An example of a Value Proposition for just one job to be done and one market segment for Canva:
+
+1. Who is the value for: Persona
+• Non-designers like social media managers.
+
+2. Why is it important: Job to be done
+• Social media marketers need to create visually appealing designs to engage audiences on social media, effectively communicate messages, and attract attention.
+
+3. What before: State before (existing problematic state)
+• They don’t have time to learn the technical skills or design from scratch.
+• They draft inconsistent designs with poor design aesthetics.
+
+4. How: Features and capabilities that change the situation
+• Intuitive drag-and-drop interface that simplifies the design process.
+• Extensive collection of pre-designed templates for various design types and industries.
+• A vast library of stock images, illustrations, and design elements.
+• Easy customization options (fonts, colors, sizes) to match brand guidelines.
+• Collaboration features for teamwork and real-time editing.
+
+5. What after: The benefits and outcomes
+• Ability to quickly create stunning, professional-grade designs without extensive graphic design skills or expensive software.
+• Streamlined design process that saves time and resources.
+• Consistency in brand visuals across all designs and platforms.
+•  Improved visual communication and engagement with target audiences.
+• Enhanced brand image and professionalism in visual content.
+• Significant cost savings compared to hiring professional designers.
+• Faster turnaround times for design projects.
+• Empowerment of non-designers to create high-quality visuals independently.
+• Scalability of design efforts without compromising quality.
+
+6. Alternatives: Your unique value, unique attributes, and optionally relative pricing vs. competitors and substitutes
+    1. Struggle to create high-quality designs using complex graphic design software like Photoshop.
+    2. Hiring expensive professional designers for every small design task.
+
+——
+
+Information about my product: see the attachment"
+Summarize an Internal Meeting,Product Management,,"Act as an experienced product manager. Summarize the meeting transcript using the following document template. 
+
+Style:
+• Use a language a primary school graduate can understand.
+
+——
+
+Document template:
+
+Date: [Date and hour]
+Participants: [Full names and roles, if available]
+Topic: [Short information]
+
+Summary:
+• [Point 1]
+• [Point 2]
+• [Point 3]
+
+Action items:
+• [When, who, what; for example: 5/30/2024, Pawel Huryn, Align with the Success team]"
+Identify Grammar And Flow Errors,Other,More: https://www.productcompass.pm/p/how-to-run-pre-mortem-template,"Act as a copywriting expert. Our goal is <objective>.
+
+Analyze the text below and identify all grammar, logical, and flow errors.
+
+Next, suggest how they should be fixed as a list of bullet points. 
+
+Restrictions:
+• Use a language a primary school graduate can understand. 
+• Do not render the entire text again.
+• Do not include anything else in the response.
+
+My text: <text>
+"
+Create a Product Requirements Document (PRD),Product Management,,"Act as an experienced product manager for a <product>.
+
+Based on the attached information, create a PRD using the template specified below.
+
+Style:
+• Use a language a primary school graduate can understand.
+
+——
+
+Product Requirements Document (PRD) template:
+
+1. Summary
+
+What is this document about? Write 2-3 sentences for those who might not have time to read the entire content.
+
+2. Contacts 
+
+(name, role, comment)
+
+3. Background
+
+In a few sentences, explain the context:
+• What is this initiative about?
+• Why are you building it now? Has something changed?
+• Is it something that just recently became possible (e.g., AI)?
+
+4. Objective
+
+Briefly explain:
+• What’s the objective?
+• Why does it matter?
+• How will it benefit the company and the customers?
+• How does it align with your vision and strategy?
+• How will you measure the success (key results)?
+
+💡 Keep your objective SMART (specific, measurable, achievable, relevant, and time-bound) and inspiring. My favorite format is OKR (Objectives and Key Results).
+
+5. Market segment(s)
+
+Briefly explain for whom you are building it, such as “Substack writers who struggle with acquisition.”
+Are there any constraints (e.g., geographic, language, regulatory)?
+
+💡 Remember that markets are defined by people's problems/jobs, not their characteristics. 
+
+6. Value proposition(s)
+
+What customer jobs/needs do you want to focus on? What will they gain, and which pains will they avoid by using your solution?
+
+💡 Consider linking research results. These might include, among other things, the Opportunity Solution Tree, Jobs to be Done, interviews, surveys (e.g., Opportunity Score), or data insights.
+
+Which of those problems will you solve way better than the competitors?
+
+💡 Consider including a Value Curve and market research insights.
+
+7. Solution
+
+7.1 UX / Prototypes
+Provide an overview of the user experience, including user flow diagrams (key screenshots) and links to prototypes (e.g., Figma).
+
+💡 A picture is worth thousands of words.
+
+7.2 Key features
+
+List the key features, providing a brief description of each.
+
+💡 Make sure it’s clear how those features contribute to the overall objective and the key results.
+
+7.3 (Optional) Technology
+
+A high-level overview of the technology used, only if non-standard and relevant. Avoid detailed technical specifications.
+
+7.4 Assumptions
+
+What are the value, usability, viability, and feasibility assumptions? Did you validate your business model, too, if applicable?
+Which risks do you accept? How can you mitigate the others?
+
+💡 You might link your hypotheses, experiments, and learnings library and just briefly summarize them here. Do not overload this document.
+
+8. Release
+
+How long could it take? What might be included in the first version, and what might be left for the future?
+
+💡 Avoid exact, absolute dates. This is an estimate, not a contract. Focus on outcomes, objectives, and when they might be achieved, not on the details.
+
+——
+
+Our research and product information: see the attachment."
+Brainstorm Growth Loops,Go-to-Market,"More: https://www.productcompass.pm/p/5-gtm-principles-with-frameworks-templates
+
+Also, visit https://gtmstrategist.com/ for more tools and insights.","Act as a go-to-market strategist for a <product>.
+
+Based on the attached information about my product, help us identify at least one flywheel that will speed up our  traction so we will not have to account only for “random referrals.”
+
+Consider 5 types of Growth Loops we defined with Ognjen Bošković, CEO Raven:
+
+1. Viral Loop: Product-related content shared on other platforms brings new users into the ecosystem.
+2. Usage Loop: Users create something (video, prototype, email, stats) and share it, driving more engagement.
+3. Collaboration Loop: Users start creating an asset (website, code, design, email, etc.) and invite colleagues to co-create and collaborate.
+4. User-Generated Loop: Users discover the platform through content and start creating more, attracting even more users.
+5. Referral Loop: After experiencing the product's value, users invite others in exchange for incentives (credits, premium features, compensation).
+
+——
+
+Information about my product: see the attachment"
+Customer Outreach,Product Management,,"Act as an experienced product manager for a <product>.
+
+Use the following details to craft a personalized customer outreach message:
+
+1. Name: [Insert Customer's Name]
+2. Customer Context: [Brief description of the customer’s situation, e.g., they recently signed up, have been using the product for 6 months, haven’t engaged with your platform lately, etc.]
+3. Goal of the Contact: [Specific purpose, e.g., gather feedback, offer support, inform about a feature, upsell, etc.]
+4. Value for the Customer: [What the customer stands to gain, e.g., resolving an issue, getting a discount, accessing a new feature, improving their workflow, etc.]
+
+——
+
+Template Output:
+
+Hi [Customer’s Name],
+
+I hope this message finds you well! I’m reaching out because [insert reason based on customer context, e.g., “we noticed you recently signed up for [product/service] and wanted to check in”].
+
+[Briefly explain the goal of the contact, e.g., “We’d love to hear your feedback so we can ensure [product/service] delivers the best experience for you.”]
+
+To make this worth your time, [insert value for the customer, e.g., “we’d like to offer you a $10 discount on your next purchase” OR “you’ll get early access to our newest feature that could save you time”].
+
+If you’re open to it, [insert a call to action, e.g., “fill out this 2-minute survey” OR “schedule a quick 15-minute call with us here: [link]”].
+
+Thank you so much for being a part of [product] – we value your insights and look forward to connecting with you!
+
+Best regards,
+[Your Name]
+[Your Title]
+[Contact Information]"
+User Personas Research,Market Research,,"Act as an experienced product researcher. 
+
+We are creating personas for a <product> targeting <broad category>. 
+
+Based on the attached data (e.g., demographic info, feature usage, pain points), create 3 refined personas. For each persona, list their primary job-to-be-done, top 3 pains, top 3 gains, and one unexpected insight derived from the data.
+
+——
+
+Data: see the attachment [surveys.csv]"
+Generate a Business Model,Product Strategy,More: https://www.productcompass.pm/p/business-model-canvas-examples,"Act as an experienced product strategist. Analyze the attached information and research about my product. 
+
+Next, generate a detailed business model using the Business Model Canvas template specified below. Prioritize ideas that are the most likely to succeed.
+
+Style:
+• Use a language a primary school graduate can understand.
+
+——
+
+Business Model Canvas
+
+1. Key Partners
+
+Identify the key partners that your business relies on to operate successfully. This might include suppliers, manufacturers, or distributors.
+For example, if you're developing a clothing brand, your key partners might include textile suppliers and manufacturers.
+
+2. Key Activities
+
+Describe the key activities that your business performs to create value for your customers. This might include product development, marketing, or customer support.
+
+For example, if you're developing a software application, your key activities might include coding, customer support, and customer success.
+
+3. Key Resources
+
+Identify the key resources that your business needs to operate successfully. This might include physical resources such as equipment and technology, as well as talented people.
+
+For example, if you're developing a hardware product, your “key resources” might include engineers, product managers, and designers.
+
+4. Value Propositions
+
+Clearly articulate the value that your business provides to your customers. What problems does it solve? This might also include affordability, convenience, or superior quality.
+
+For example, if you're developing a meal kit delivery service, your value proposition might be the convenience of having healthy meals delivered straight to your door.
+
+5. Customer Relationships
+
+Describe the type of relationship that your business has with its customers. This might include personalized service, self-service, or community-building.
+
+For example, if you're developing a social media platform, your customer relationships might be based on fostering a sense of community and connection among your users.
+
+6. Channels
+
+Identify the channels through which your business reaches its customers. This might include physical channels such as storefronts or online channels such as websites and social media.
+
+For example, if you're developing a fashion brand, your channels might include an online store and social media platforms like Instagram and Pinterest.
+
+7. Customer Segments
+
+Identify the specific groups of people or businesses that your product is intended for. This might include demographic information, psychographic information, and buying habits.
+
+For example, if you're developing a subscription-based coffee delivery service, your customer segments might include coffee lovers who appreciate quality and convenience.
+
+8. Cost Structure
+
+Identify the costs of developing, producing, and delivering your product. This might include expenses such as salaries, marketing, and rent.
+
+For example, if you're developing a mobile app, your cost structure might include server costs, salaries, marketing activities, and software licensing fees.
+
+9. Revenue Streams
+
+Describe the different ways in which your business will generate revenue from your product. This might include sources such as subscriptions, licensing fees, or one-time purchases.
+
+For example, if you're developing a software application, your revenue streams might include subscription fees and in-app purchases.
+
+——
+
+Information about my product: see the attachment"
+Outcome-Based Roadmap,Product Management,,"You’re an experienced product manager at a <product>. 
+
+We want to move away from output-focused roadmaps to outcome-focused ones.
+
+Based on the attached list of upcoming initiatives and information about our strategy, rewrite the list as outcome statements that reflect the user and business impacts we want to see.
+
+——
+
+Our upcoming initiatives: see the attachment."
+Draft a Privacy Policy,Other,,"Act as a veteran legal representative.
+
+Help me draft a detailed privacy policy for a <product> described here: <product_url>. 
+
+My company details: <name, address, contact email>.
+
+Assumptions:
+• Type of information that will be processed: <specify, e.g., email, localization, first name, last name, behavior>.
+• Ensure the Privacy Policy is based on the <US jurisdiction>.
+• Highlight clauses that may require further legal review or customization.
+
+Style:
+• When possible, use a language a primary school graduate can understand."
+Brainstorm Taglines,Product Marketing,,"Act as an experienced branding consultant.
+
+Suggest 5 unique, memorable taglines for <product> addressed to <market segment> that can be used in our marketing campaigns.
+
+Briefly explain the rationale for each suggestion."
+Competitor Analysis,Market Research,,"Act as an experienced product strategists.
+
+Help analyze the competitors for <product> in the <industry/market segment>. 
+
+Identify 5 direct competitors, their strengths, weaknesses, and opportunities for differentiation."
+"Estimate Market Size (TAM, SAM, TOM)",Product Strategy,,"Act as an experienced product strategists. 
+
+Estimate the market size for <product> in <market constraints, e.g. geography>: TAM, SAM, SOM.
+
+How it might change in the next 2-3 years?"
+Help With a Pre-Mortem Analysis,Product Management,More: https://www.productcompass.pm/p/how-to-run-pre-mortem-template,"Act as a veteran product manager for <product>.
+
+Analyze the attached PRD. Imagine it is 14 days after launch. The project has failed. What are the reasons?
+
+Categorize those reasons as:
+• A Tiger is a real problem you see that can derail the project. 
+• A Paper Tiger is a problem you think others might worry about, but you are not. This is often something you are working on or are very close to, so you understand why it might not be a Tiger.  
+• An Elephant is something you are not sure is a problem, but you’re worried that the group is not talking about it enough. This is often something you are not working closely with but can imagine to be a potential issue. 
+
+Next categorize every Tiger as:
+• Launch-blocking: Issues that must be resolved before the launch.
+• Fast-follow: Items to address in the next iteration.
+• Track: Concerns to monitor and assess if they become more significant
+
+Finally, for every launch-blocking Tiger, suggest an action plan and who the best owner might be.
+
+——
+
+Our PRD: See the attachment."
+Perform PESTLE Analysis,Product Strategy,You can also specify product page URL,"Act as an experienced product strategist. Analyze the attached information and research about my product. 
+
+Next, perform a detailed PESTLE analysis for my product using the following instructions: https://miro.com/templates/pestle-analysis/
+
+Style:
+• Use a language a primary school graduate can understand. 
+
+——
+
+Information about my product: see the attachment"
+Brainstorm Monetization Strategy,Product Strategy,,"Act as an experienced business model strategist.
+
+Brainstorm 3-5 monetization strategies for <product or product feature> targeting <market segment>.
+
+For each strategy, include how it works, why it fits the audience’s needs, and any risks or challenges.
+
+Finally, suggest how we can test those assumptions with minimal effort."
+Prioritize Assumptions,Product Discovery,More: https://www.productcompass.pm/p/assumption-prioritization-canvas,"Act as an experienced product manager for a <product>.
+
+Help me prioritize the assumptions specified below. For each assumption, consider:
+
+• Impact: Not just the value you can create by implementing a specific idea but also the number of customers affected.
+• Risk: Defined as (1 - Confidence) * Effort, where Confidence and Effort are known from RICE/ICE prioritization.
+
+Then:
+
+• For low Impact and low Risk, suggest deferring testing the assumption until other assumptions are tested.
+• For high Impact and low Risk, suggest implementing an idea.
+• For low Impact and high Risk, we suggest not testing and rejecting the idea.
+• For high Impact and high Risk suggest an experiment to test the assumption.
+
+Finally, suggest an experiment for each assumption to test that will allow us to get maximum validated learning with minimal effort. 
+
+Restrictions:
+• If the experiment involves users, remember not to rely on people’s opinions but to measure their behaviors.
+
+——
+
+Our assumptions and research so far: see the attachment
+
+"
+Brainstorm Positioning Ideas,Product Marketing,,"Act as an experienced brand strategist.
+
+First, identify our top 5 competitors.
+
+Next, help brainstorm positioning ideas for <product> targeting <market segment>. 
+
+For each idea, provide a one-sentence positioning statement and a brief rationale for why it would resonate with the audience. Ensure ideas are differentiated from competitors."
+Analyze Porter’s Five Forces,Product Strategy,You can also specify product page URL,"Act as an experienced product strategist. Analyze the attached information and research about my product. 
+
+Next, perform a detailed Porter’s Five Forces analysis for my product using the following instructions: https://miro.com/templates/porters-five-forces/
+
+Style:
+• Use a language a primary school graduate can understand. 
+
+——
+
+Information about my product: see the attachment"
+Brainstorm a Product Vision,Product Strategy,,"Act as a veteran product leader for <product>.
+
+Based on the attached information about our company and product, brainstorm a product vision.
+
+Remember that the vision will motivate your teams to wake up every morning and go to work.
+
+[Important] An effective vision needs to be:
+• Inspiring: People who help to implement the vision should feel inspired and excited. And you don’t get inspired by chasing financial metrics.
+• Achievable: It must have a decent chance of working. Don’t dream of traveling to Alpha Centauri until you send humans to Mars.
+• Emotional: A vision becomes impactful and memorable when it resonates emotionally and inspires practical action.
+
+Briefly explain your rationale.
+
+——
+
+Information about my product: see the attachment"
+Draft an NDA,Other,,"Act as a veteran legal representative.
+
+Help me draft a detailed NDA (Non-Disclosure Agreement) between:
+• Our company: <name, address> represented by <person 1, person 2>
+• Our partner: <name, address> represented by <person 3, person 4>
+
+Assumptions:
+• Type of information that will be shared: <specify, e.g. technology, customer data>.
+• Ensure the NDA is based on the <US jurisdiction>.
+• Highlight clauses that may require further legal review or customization.
+
+Style:
+• When possible, use a language a primary school graduate can understand."
+Generate a Dummy Dataset for Testing,Execution,Please adjust the prompt to your needs,"Act as an experienced Software Quality Assurance expert. 
+
+Generate a dummy dataset for <product> that contains <dataset type, e.g., customer feedback>.
+
+The dataset should include realistic but fictional values for the following columns:
+1. [Column Name 1]: [Description, e.g., User ID – a unique identifier for each user, e.g., U1234].
+2. [Column Name 2]: [Description, e.g., Name – a random first and last name].
+3. [Column Name 3]: [Description, e.g., Email – a valid but fictional email address].
+4. [Column Name 4]: [Description, e.g., Date of Transaction – a random date within the last 6 months].
+5. [Column Name 5]: [Description, e.g., Transaction Amount – a random monetary value between $5 and $500].
+6. [Column Name 6]: [Description, e.g., Product Category – one of several fixed options, such as ""Electronics,"" ""Clothing,"" ""Home Decor""].
+
+Dataset Requirements:
+• Number of Rows: [Specify how many rows you need, e.g., 100].
+• Format: [Specify output format, e.g., CSV, JSON, or table].
+• Additional Constraints: [Add any specific rules or patterns, e.g., no duplicate email addresses, realistic-looking names, or logical date ranges].
+
+Example row: U001, John Smith, john.smith@email.com, 2024-11-15, $150.75, Electronics
+
+Output:
+[Specify if you'd like the actual data or code to generate it, e.g., CSV, Python script, SQL insert commands. "
+Analyze Feature Requests,Product Discovery,,"Act as an experienced product manager for a <product>.
+
+Your goal is to <objective> with <desired outcomes>.
+
+Analyze the provided list of feature requests.
+
+Categorize the requests into themes, assess their alignment with your goals, and prioritize the top 3 features to consider based on impact, effort, risk, and strategic alignment.
+
+For each top feature provide rationale (e.g. customer needs, strategic alignment), alternative solutions, high-risk assumptions, and how to test those assumptions with minimal effort.
+
+——
+
+Feature requests: see the attachment"
+Identify ICP (Ideal Customer Profile),Go-to-Market,"More: https://www.productcompass.pm/p/5-gtm-principles-with-frameworks-templates
+
+Also, visit https://gtmstrategist.com/ for more tools and insights.","Act as an experienced market researcher.
+
+Based on the attached research (e.g., product-market fit survey), identify the Ideal Customer Profile (ICP) for <product> that is most likely to pay for your product.
+
+Include key characteristics such as demographics, behaviors, and jobs to be done, and needs (pain points).
+
+——
+
+Information about my product: see the attachment"
+Perform SWOT Analysis,Product Strategy,You can also specify product page URL,"Act as an experienced product strategist. Analyze the attached information and research about my product. 
+
+Next, perform a detailed SWOT analysis for my product using the following instructions: https://miro.com/templates/swot-analysis/
+
+Style:
+• Use a language a primary school graduate can understand. 
+
+——
+
+Information about my product: see the attachment"
+Brainstorm Team-Level OKRs,Product Management,,"Act as a veteran product leader for <product>.
+
+Analyze the current company objectives.
+
+Next, brainstorm three suggested Objective and Key Results (OKR) sets for a product team responsible for <product area>. Make sure those OKRs are aligned with company-wide objectives.
+
+Remember that the two ingredients ok OKRs are:
+• Objective - A qualitative, inspirational goal for a team to focus on.
+• Key Results - Quantitative metrics (typically three) that monitor progress towards the Objective.
+
+For example:
+• Objective: Delight new users with the onboarding flow
+• Key results:
+    ◦ Customer Satisfaction (CSAT) >= 75%.
+    ◦ 66%+ onboardings completed within two days.
+    ◦ An average Time to Value (TTV) <= 20 minutes.
+
+——
+
+The current company objectives: <insert here or see the attachment>
+"
+Identify North Star Metric,Product Growth,More: https://www.productcompass.pm/p/the-north-star-framework-101,"Act as a veteran product growth expert.
+
+Your goal is to identify a North Star Metric and a set of Input Metrics for a <product>, based on the attached product information.
+
+First, identify one of the three games my company is playing:
+
+• Attention - How much time do your customers want to spend in your product? The time and recurrent use of a product can indicate the value people derive from it. For example, Facebook, Spotify, and YouTube.
+
+• Transaction - How many transactions do your customers make in your product? Your goal is to assist customers in finding the right product quickly and easily. For example, Amazon, Uber, and Airbnb.
+
+• Productivity - How efficiently and effectively can someone do their work? Your goal is to help customers with specific tasks. For example, Canva, Dropbox, and Loom.
+
+Next, suggest a single metric that:
+
+• Is easy to understand, enabling everyone to speak the same language.
+• Is customer-centric. Reflects how customers get value from the product.
+• Ideally ensures the value is sustainable, typically by forming habits.
+• Represents your progress toward vision / mission, fostering alignment among your teams and inspiring them to move in the same direction.
+• Is quantitative. It relies on numbers, not opinions.
+• Is actionable. Whether it increases or decreases, you will take action based on it. Otherwise, what's the point of tracking it?
+• Serves as a leading indicator of your long-term business success.
+
+Finally, identify 3-5 additional “Input metrics” that influence the North Star Metric the most. Together they will create a “constellation.”
+
+——
+
+Information about my product: see the attachment"
+Generate Value Proposition Statements,Product Marketing,More: https://www.productcompass.pm/p/how-to-design-value-proposition-template,"Act as an experienced product growth expert for <product>.
+
+Based on the attached value proposition(s), came up with value proposition statements that we can use to craft targeted marketing content, sales presentations, or customer onboarding messages.
+
+Each value proposition statement must:
+• Directly address the target market segment.
+• Emphasize the main benefit.
+• Highlight the key features and capabilities that make this possible.
+
+Value proposition statement examples for Canva:
+
+1. Canva empowers social media marketers to create stunning, on-brand designs effortlessly without needing extensive graphic design skills or expensive software. This enables them to engage audiences and communicate messages on social media platforms effectively.
+
+2. With Canva's intuitive drag-and-drop interface, an extensive collection of pre-designed templates, and a vast library of design assets, social media managers can save time and resources and ensure consistency in brand visuals across all designs and platforms.
+
+3. By using Canva, social media marketers can quickly create professional-grade designs that enhance their brand image, significantly reduce design costs, and improve visual communication with target audiences. This ultimately leads to increased engagement and scalability of their design efforts without compromising quality."
+Brainstorm GTM Motions,Go-to-Market,"More: https://www.productcompass.pm/p/5-gtm-principles-with-frameworks-templates
+
+Also, visit https://gtmstrategist.com/ for more tools and insights.","Act as a go-to-market strategist for a <product>.
+
+Based on the attached information about my product, help me identify 2-3 best go-to-market motions and the tools I can use.
+
+Next, for each motion, suggest specific activities I can take, e.g., sharing product-related content for free to acquire new users with recommended tools.
+
+Consider the following GTM motions and tools:
+
+GTM Motion 1: Inbound
+• Growth Lever: Content creation to generate leads.
+• Useful Tools:
+    ◦ LinkedIn (for professional outreach and networking)
+    ◦ SEMRush (for SEO and keyword optimization)
+    ◦ Grammarly (for polished, error-free content).
+
+GTM Motion 2: Outbound
+• Growth Lever: Cold outreach to prospects via email, social media, phone, etc.
+• Useful Tools:
+    ◦ LinkedIn Sales Navigator (for identifying and connecting with potential customers).
+    ◦ ZoomInfo (for gathering prospect data).
+    ◦ Lemlist (for personalized cold email campaigns).
+
+GTM Motion 3: Paid Digital
+• Growth Lever: Media buying to capture the target audience's attention.
+• Useful Tools:
+    ◦ Google Ads (for search and display advertising).
+    ◦ Meta Ads (for Facebook/Instagram ads).
+    ◦ Newswire (for press release distribution).
+
+GTM Motion 4: Community
+• Growth Lever: Engaging and creating content for community members.
+• Useful Tools:
+    ◦ Slack (for building professional communities).
+    ◦ Reddit (for engaging niche audience groups).
+    ◦ Discord (for interactive community discussions).
+
+GTM Motion 5: Partners
+• Growth Lever: Collaborating with compatible companies for mutual marketing and sales benefits.
+• Useful Tools:
+    ◦ Miro (for collaborative projects).
+    ◦ AWS Startups (for tech partnerships).
+    ◦ Oracle Partners (for software integration opportunities).
+
+GTM Motion 6: Account-Based Marketing (ABM)
+• Growth Lever: Targeting high-value accounts with personalized campaigns.
+• Useful Tools:
+    ◦ Pipedrive (for managing sales pipelines).
+    ◦ Hunter (for finding contact information).
+    ◦ Clay (for automating prospecting workflows).
+
+GTM Motion 7: Product-Led Growth (PLG)
+• Growth Lever: Developing solutions for self-onboarding and early value realization.
+• Useful Tools:
+    ◦ Hotjar (for tracking user behavior).
+    ◦ Amplitude (for product analytics).
+    ◦ Sentry (for monitoring product performance).
+
+——
+
+Information about my product: see the attachment"
+Brainstorm Product Name,Product Marketing,,"Act as an experienced branding consultant for <company_context>.
+
+Suggest five unique, memorable product names for <product> that align with the brand’s values and target audience. 
+
+Briefly explain the rationale for each suggestion."
+Develop a GTM Strategy,Go-to-Market,,"Act as an experienced digital marketer.
+
+Create a go-to-market strategy to launch <product> targeting <market segment> based on the attached early research data.
+
+Include key marketing channels, messaging tailored to the target audience, and metrics to measure success.
+
+——
+
+Our research: see the attachment"
+Create WWAs,Execution,By far one of my most favorite formats,"Act as an experienced product manager for a <product>.
+
+Create a set of product backlog items for <a new feature> based on the attached design and <key assumptions>. 
+
+When creating product backlog items:
+• Aim to create independent, negotiable, valuable, small, and testable items that can be estimated.
+• Use a language a primary school graduate can understand.
+
+[Important] The expected format:
+
+1. Why: 1-2 sentences that tie the work to the strategic context and team objectives.
+
+2. What: Short description and a link to designs. Typically 1-2 paragraphs. It's just a reminder of what was discussed, not a detailed specification.
+
+3. Acceptance Criteria: A few high-level bullet points. Those are not detailed test scenarios. And it's not a contract."
+Brainstorm a Beachhead Segment,Go-to-Market,"More: https://www.productcompass.pm/p/5-gtm-principles-with-frameworks-templates
+
+Also, visit https://gtmstrategist.com/ for more tools and insights.","Act as a go-to-market strategist for a <product>.
+
+Based on the attached information about my product, help me identify my first beachhead segment that matches the following criteria:
+• Has a burning pain point,
+• Displays decent willingness to pay,
+• You can win 60-70% of the selected market in 3-18 months if your GTM journey,
+• Will refer and recommend the product to others (adjacent segments).
+
+Start small. Do not be afraid to go super-specific here.
+
+——
+
+Information about my product: see the attachment"
+Adjust a PM resume,Product Management,This prompt assumes you already used https://www.aigents.pm/resume-review,"# Role
+You are an expert career advisor specializing in product manager resume optimization.
+
+# Objective
+Adjust my resume to the job description below. Work step by step to craft a tailored version that maximizes my chances of getting an interview. Aim for a resume that gets an immediate “YES.”
+
+# Best Practices
+• Treat the resume as a marketing tool to land the interview — not a full biography.
+• Ensure every bullet point is relevant to the specific job.
+• Identify and include keywords and phrases used in the job description (e.g., “cross-functional teams,” “Agile delivery,” “complex workflows”) — only if they are present in the job listing.
+• Focus primarily on the last 1–2 roles, as they carry the most weight.
+• Quantify results or outcomes where possible (e.g., “reduced delivery time by 30%”), prioritizing business-focused outcomes.
+
+# Constraints
+• Use only facts based on my resume.
+• If you need to infer or guess something, flag it clearly so I can review it.
+• Do not include generic or unrelated experience.
+• Do not change my resume structure.
+
+# Job Description
+{{Paste here}}
+
+# My Resume
+{{Paste here}}"
+Create Detailed Test Scenarios,Execution,,"Act as an experienced Software Quality Assurance expert for <product>.
+
+Based on the User Story and high-level acceptance criteria provided below, create a comprehensive set of detailed test scenarios.
+
+For each test scenario, include:
+
+1. Test Objective: A clear description of what the test scenario aims to validate.
+2. Starting Conditions: Define the system state, any setup needed, and specific data or configurations required before executing the test.
+3. User Role: Specify the user role or persona performing the actions (e.g., logged-in user, admin, guest, etc.).
+4. Test Steps: Break down each user interaction step-by-step in detail.
+5. Expected Outcomes: Describe the expected results or behavior of the system after each step.
+
+——
+
+The User Story to examine: <content>"
+Brainstorm New Ideas: Existing Product,Product Discovery,,"You work in a product trio performing continuous product discovery for <product>.
+
+Your goal is to <objective and desired outcomes>.
+
+The product trio identified that <market segment, opportunity> wants to <desired outcomes> when <optional context>.
+
+Ideate separately from the perspective of an experienced product manager, an experienced product designer, and an experienced software engineer. Come up with 5 product ideas for each role.
+
+Finally, prioritize five ideas that <expectations> and provide your reasoning."
+Meta Prompting,Prompt Engineering,This is done after a few rounds of prompting for the desired output,Edit the original prompt so you can get to this output in one shot
+Perform Ansoff Matrix Analysis,Product Strategy,You can also specify product page URL,"Act as an experienced product strategist. Analyze the attached information and research about my product.
+
+Next, generate a detailed Ansoff Matrix for this product using the following instructions: https://miro.com/templates/ansoff-matrix/
+
+Style:
+• Use a language a primary school graduate can understand. 
+
+——
+
+Information about my product: see the attachment"

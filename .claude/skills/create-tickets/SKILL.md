@@ -453,3 +453,58 @@ Before delivering tickets, verify:
 - [ ] **Technical context sufficient** -- Engineers should not need to ask "what exactly do you want?" after reading the ticket
 
 If any check fails, fix it before delivering. Bad tickets slow engineering down more than no tickets at all.
+
+---
+
+## Mode: --stories (User Story Format)
+
+Use `/create-tickets --stories` to generate tickets specifically as user stories with INVEST criteria — focused on outcomes, not implementation.
+
+```
+/create-tickets --stories
+
+Tell me:
+1. Feature or epic name
+2. User type(s) involved (which personas)
+3. The job they're trying to accomplish
+
+I'll generate stories in "As a / I want / So that" format with acceptance criteria in Given/When/Then.
+```
+
+### User Story Template
+
+```
+## Story: [Title in action format]
+
+**User story:**
+As a [specific user type],
+I want [specific action or capability],
+So that [outcome or benefit].
+
+**Acceptance criteria:**
+- Given [context/precondition], when [user action], then [expected result]
+- Given [context], when [edge case], then [expected behavior]
+- Given [error condition], when [action], then [graceful failure]
+
+**Definition of Done:**
+- [ ] Functionality works as described
+- [ ] Edge cases from AC are handled
+- [ ] Analytics events fire correctly (see tracking plan)
+- [ ] No regression in related features
+- [ ] Design QA completed
+
+**Estimate:** [S / M / L / XL]
+**Dependencies:** [None / Blocked by: ticket X]
+**Notes for engineering:** [Any technical context, API docs, or implementation hints]
+```
+
+### INVEST Criteria Check (per story)
+
+| Criterion | Question | Pass? |
+|-----------|---------|-------|
+| Independent | Can this be worked on without waiting for other stories? | |
+| Negotiable | Is scope flexible if needed? | |
+| Valuable | Does this deliver value to the user on its own? | |
+| Estimable | Can engineering size this after reading it? | |
+| Small | Completable in one sprint? | |
+| Testable | Are acceptance criteria specific and verifiable? | |

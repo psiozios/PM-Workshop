@@ -259,6 +259,83 @@ After sizing impact:
 
 ---
 
+## Market Sizing Mode (TAM/SAM/SOM)
+
+Use this when you're sizing the market opportunity, not just a specific feature. Run this alongside or before the 4-Step Framework when building a business case or entering a new segment.
+
+### The Three Levels
+
+**TAM — Total Addressable Market**
+Everyone who could theoretically need this solution, globally, if you could reach them all. This is the ceiling, not the plan.
+
+**SAM — Serviceable Addressable Market**
+The portion of TAM you can realistically reach with your current go-to-market, pricing, and geographic focus.
+
+**SOM — Serviceable Obtainable Market**
+What you can realistically win in 1-3 years, given competition, your stage, and your resources. This is what you're actually planning against.
+
+---
+
+### Two Methods
+
+**Top-Down Method** *(use when market research exists)*
+
+```
+1. Find total market size from research (analyst reports, industry data)
+2. Apply segment filters → TAM to SAM
+   (e.g., "B2B SaaS companies with 50-500 employees in North America")
+3. Apply market share assumption → SAM to SOM
+   (e.g., "We expect to capture 5-8% of SAM in 3 years based on competitive dynamics")
+4. Show the math: TAM → SAM → SOM with each filter labeled
+```
+
+*Sources: Gartner, Forrester, IDC, Statista, industry trade associations, public company filings*
+
+**Bottom-Up Method** *(use when internal data is stronger than market research)*
+
+```
+1. Start with your unit economics
+   (price per customer × frequency × usage)
+2. Multiply by addressable customer count
+   (total customers in segment × % reachable with your GTM)
+3. Apply realistic penetration rate to get SOM
+   (based on sales cycle, win rate, and expansion capacity)
+
+Formula: Unit Price × Annual Frequency × Addressable Customers × Penetration Rate = SOM
+```
+
+*Prefer bottom-up when you have real data on pricing and customer counts. More credible with skeptical audiences.*
+
+---
+
+### Market Sizing Output Template
+
+```markdown
+## Market Sizing: [Product/Feature/Segment]
+
+**Method used:** Top-Down / Bottom-Up / Both
+
+| Level | Size | Key Assumption |
+|-------|------|----------------|
+| TAM | $[X]B | [Who this includes, source] |
+| SAM | $[X]M | [Geographic/segment filter applied] |
+| SOM | $[X]M | [Market share assumption, timeline] |
+
+**Key variables:**
+- [Assumption 1]: [Value] — Confidence: [H/M/L]
+- [Assumption 2]: [Value] — Confidence: [H/M/L]
+
+**Sensitivity range:**
+- Conservative SOM: $[X]M (if [pessimistic assumption])
+- Base case SOM: $[X]M
+- Optimistic SOM: $[X]M (if [optimistic assumption])
+
+**Implications:**
+- [What this means for resource allocation, pricing, or go-to-market]
+```
+
+---
+
 ## Tips
 
 - **Do the amount that fits your world** - Few weeks? Address top assumption. More time? Go deeper.
@@ -281,3 +358,4 @@ Before presenting output to the PM, verify:
 - [ ] **De-risking actions identified:** Every Low-confidence assumption has a specific, actionable de-risking step (not generic "do more research")
 - [ ] **Impact tied to strategic goal:** The recommendation section explicitly references a strategic goal or OKR from `context-library/strategy/`
 - [ ] **Sensitivity analysis included:** Output shows best-case, worst-case, and expected-case scenarios with the key variable that drives the range
+- [ ] **Market sizing (if requested):** TAM/SAM/SOM provided with method (top-down or bottom-up), explicit assumptions, and confidence levels for each level

@@ -36,6 +36,12 @@ The PM has organized their knowledge into this workspace. Always reference:
 - `context-library/meetings/` for all meeting notes, syncs, retros
 - `context-library/example-prds/` for reference examples when drafting documents
 - `templates/` for empty templates only (not filled-out work)
+- `templates/knowledge/` for validated PM knowledge assets that power skill behavior:
+  - Survey question templates (PMF, NPS, CSAT, CES, JTBD, Van Westendorp) → powers `/survey-builder`
+  - 63 curated interview questions organized by phase → powers `/interview-guide`
+  - Business Model Canvas and Lean Canvas templates → powers `/business-model-canvas`
+  - 69 PM template references across all PM functions
+  - 139 AI prompts across Product Compass and Growth Prompt libraries
 
 ### 2. Output Philosophy
 
@@ -124,7 +130,7 @@ When the PM uses a skill command (e.g., `/prd-draft`, `/meeting-notes`), Claude 
 
 All skills are registered as native slash commands. You can invoke them by typing `/skill-name` or Claude may auto-load them when relevant.
 
-**Available Skills (41 total - fully context-aware and cross-integrated):**
+**Available Skills (62 total - fully context-aware and cross-integrated):**
 
 All skills now check your workspace context first, reference related analyses, and connect insights like a real PM would.
 
@@ -142,24 +148,34 @@ All skills now check your workspace context first, reference related analyses, a
 - `/status-update` - Generate stakeholder updates (auto-pulls progress from PRDs, metrics, meetings)
 - `/decision-doc` - Document decisions (references past decisions, research, strategy trade-offs)
 - `/slack-message` - Draft team communications (tailors to stakeholder profiles, links to context)
+- `/board-deck` - Prepare executive and board-level presentations (board updates, all-hands, EBRs, investor updates; structures narrative, identifies data needed)
+- `/prd-lite` - Generate lightweight feature proposals for prioritization decisions (fast, opinion-strong; decision-grade docs before committing to a full PRD)
+- `/editing-assistant` - Edit and improve any PM document (shorten, clarify, adapt for audience, polish prose, strengthen arguments; works on PRDs, strategy docs, emails, Slack)
+- `/stakeholder-tactics` - Navigate stakeholder dynamics (four modes: map influence, align priorities, resolve conflicts, prepare for difficult meetings)
+- `/content-marketing` - Create product-led content assets (six modes: launch announcement, changelog, release notes, in-app onboarding copy, case study, content brief)
 
 **User Research & Interviews:**
 - `/user-interview` - Process interviews (checks past interviews, validates themes, suggests follow-ups)
 - `/interview-prep` - PM job interview preparation (Product Sense, Execution, Behavioral frameworks and practice)
-- `/interview-guide` - Create JTBD interview guides (checks existing research, deduplicates questions)
+- `/interview-guide` - Create JTBD interview guides (includes 63-question curated library organized by phase; checks existing research, deduplicates questions)
 - `/interview-feedback` - Post-PM-interview debrief and continuous improvement for job search
 - `/user-research-synthesis` - Turn interviews into insights (shows recurring themes, links to decisions/PRDs)
+- `/survey-builder` - Design research surveys using validated PM methodologies (PMF, NPS, CSAT, CES, JTBD, Van Westendorp pricing; exact question wording and interpretation guides)
+- `/voice-of-customer` - Aggregate customer feedback into VoC reports (cross-channel synthesis from support, sales calls, interviews, NPS, reviews; surfaces patterns and product implications)
 
 **Strategic Frameworks:**
 - `/write-prod-strategy` - Product strategy docs (checks existing strategy, references competitive positioning, links to North Star)
-- `/strategy-sprint` - Create strategy (1 day/week/month) (builds on existing strategy, references business goals)
+- `/strategy-sprint` - Create strategy (1 day/week/month) (builds on existing strategy, references business goals; pairs with `/business-model-canvas` for new products)
+- `/business-model-canvas` - Build or critique a Business Model Canvas or Lean Canvas (two modes: generate from scratch or critique for gaps; uses templates from `templates/knowledge/`)
+- `/okr-planning` - Create and align quarterly OKRs (two modes: write OKRs or critique existing; ensures North Star alignment, leading/lagging balance, measurable Key Results)
 - `/prioritize` - LNO Framework task classification (aligns with strategy pillars, flags overhead)
 - `/define-north-star` - Identify North Star Metric (checks existing definition, references OKRs, validates with metrics)
 - `/metrics-framework` - Leading vs lagging indicators (references existing dashboards, links to strategy)
 - `/journey-map` - Create journey maps (pulls user research quotes, links to activation/retention analysis)
 
 **Product Analysis:**
-- `/impact-sizing` - Quantify feature value (references past sizing accuracy, pulls baseline metrics from MCP)
+- `/impact-sizing` - Quantify feature value and market size (4-step framework + TAM/SAM/SOM sizing; references past sizing accuracy, pulls baseline metrics from MCP)
+- `/win-loss-analysis` - Synthesize sales win/loss data into product and positioning insights (turns sales call notes, churn interviews, and CRM data into roadmap implications)
 - `/feature-metrics` - Define success metrics (checks existing dashboards, ladders to North Star, uses STEDII)
 - `/feature-results` - Post-launch analysis (compares actual vs estimated impact, learns for next time)
 - `/activation-analysis` - Diagnose activation funnel (pulls D7/D30 from MCP, checks onboarding research, links to retention)
@@ -167,6 +183,10 @@ All skills now check your workspace context first, reference related analyses, a
 - `/expansion-strategy` - Upsell/cross-sell tactics (queries NRR from MCP, analyzes expansion cohorts, root cause diagnosis)
 - `/experiment-decision` - When to A/B test vs ship (checks traffic from MCP, references past experiments)
 - `/experiment-metrics` - STEDII framework for trustworthy metrics (validates data quality, checks metric sensitivity)
+- `/feature-request-analysis` - Synthesize and prioritize feature requests (cluster by JTBD, score by frequency/intensity/strategic fit, surface real need beneath each request)
+- `/root-cause-analysis` - Structured problem investigation (5 Whys, fishbone diagram, hypothesis-driven; for metric drops, bugs, churn, or underperforming features)
+- `/opportunity-sizing` - Evaluate strategic size of a market or product opportunity (TAM/SAM/SOM, problem validation, willingness to pay, competitive assessment)
+- `/pricing-analysis` - Design and analyze pricing strategy (four modes: pricing research, model selection, packaging design, competitive benchmarking)
 
 **Prototyping & Design:**
 - `/generate-ai-prototype` - Generate AI prototype prompts (references PRD requirements, past prototypes)
@@ -175,12 +195,19 @@ All skills now check your workspace context first, reference related analyses, a
 - `/prototype-feedback` - Build → review → iterate (checks PRD requirements, validates against research)
 
 **Competitive Intelligence:**
-- `/competitor-analysis` - Deep analysis + ongoing monitoring (checks user research for mentions, sales/CS feedback, past analysis; two modes: comprehensive research or monthly tracking)
+- `/competitor-analysis` - Deep analysis + ongoing monitoring (checks user research for mentions, sales/CS feedback, past analysis; two modes: comprehensive or monthly tracking; includes SWOT, Porter's Five Forces, PESTEL, and Ansoff Matrix frameworks)
+- `/sales-battlecard` - Create competitive battle cards for sales (30-sec pitch, differentiation proofs, objection handling, landmine questions, proof points)
 
 **Development & Execution:**
 - `/create-tickets` - Create tickets via MCP or formatted text (links to PRDs, auto-populates context from meetings)
 - `/launch-checklist` - Comprehensive product launch planning (prioritized checklist with owners, dependencies, critical path)
+- `/pre-mortem` - Run structured pre-mortem sessions before launches or major decisions (surfaces failure modes via past-tense failure imagination; risk register with mitigations)
 - `/code-first-draft` - Initial feature implementation from PRD specs (explores codebase, creates implementation plan, writes code with tests)
+- `/sprint-planning` - Sprint planning and backlog grooming (capacity planning, story estimation, sprint goals, team readiness checks)
+- `/analytics-instrumentation` - Design tracking plans before engineering ships (event taxonomy, naming conventions, user properties, funnel design, QA checklist)
+- `/deprecation-plan` - Plan and execute feature deprecations (impact analysis, migration paths, communication timeline, sunset go/no-go checklist)
+- `/post-mortem` - Blameless post-mortem after incidents, failed launches, or missed goals (timeline, impact, root cause, response quality, action items)
+- `/ai-quality-debug` - Evaluate and debug AI feature quality as a PM (four modes: define quality criteria, evaluate outputs, diagnose regressions, go/no-go decision)
 
 **Fun:**
 - `/ralph-wiggum` - Devil's advocate PRD/document reviewer with humor and sharp critique (finds logical gaps, questionable assumptions, and missing data)
@@ -314,8 +341,15 @@ For complex, multi-step processes, use the appropriate skills:
 - `/prd-draft` - PRD creation (from idea to launch-ready spec)
 - `/user-interview` - User interview processing (raw notes to insights)
 - `/meeting-cleanup` - Meeting day cleanup (batch process all meeting notes)
-- `/competitor-analysis` - Competitive intel (weekly competitor research)
+- `/competitor-analysis` - Competitive intel (weekly competitor research; includes SWOT, Porter's Five Forces, PESTEL, Ansoff Matrix)
 - `/prototype-feedback` - Prototype feedback loop (build → review → iterate)
+- `/win-loss-analysis` - Sales intel synthesis (from raw call notes to roadmap implications)
+- `/pre-mortem` - Pre-launch risk surfacing (facilitated or solo; risk register with mitigations)
+- `/post-mortem` - Post-incident or post-launch blameless retrospective (timeline, root cause, action items)
+- `/okr-planning` - Quarterly OKR creation and critique
+- `/board-deck` - Executive presentation preparation (board updates, all-hands, EBRs)
+- `/voice-of-customer` - Cross-channel customer feedback synthesis (support, sales, research, NPS, reviews)
+- `/sprint-planning` - Sprint planning and backlog grooming with capacity checks
 
 ## Recommended Workflows
 
@@ -348,6 +382,34 @@ These workflows chain skills together for common PM activities:
 2. `/metrics-framework` to build the leading/lagging indicator hierarchy
 3. `/write-prod-strategy` to write the full product strategy
 4. `/prioritize` to classify and prioritize your backlog
+
+**Sales Intelligence Workflow:**
+1. `/win-loss-analysis` to synthesize sales call notes and churn interviews into patterns
+2. `/competitor-analysis` to enrich with competitive context (SWOT, Porter's Five Forces)
+3. `/write-prod-strategy` to update positioning based on what you learned
+4. `/prd-draft` to spec the product gaps that are blocking deals
+
+**Pre-Launch Risk Workflow:**
+1. `/pre-mortem` to surface failure modes before launch (2-4 weeks before go-live)
+2. `/launch-checklist` to embed mitigations into the launch plan
+3. `/decision-doc` to document the go/no-go rationale
+
+**Quarterly Planning Workflow:**
+1. `/okr-planning` to create or critique this quarter's OKRs
+2. `/board-deck` to prepare the quarterly business review for executives
+3. `/status-update` to share OKR progress with stakeholders throughout the quarter
+
+**Incident Response Workflow:**
+1. `/post-mortem` after any incident, failed launch, or major miss (blameless, action-oriented)
+2. `/root-cause-analysis` to go deeper on specific failure modes that need more investigation
+3. `/sprint-planning` to reprioritize the next sprint around the highest-impact fixes
+
+**New Feature Research Workflow:**
+1. `/opportunity-sizing` to validate the market size and strategic fit before committing
+2. `/survey-builder` to run a PMF or JTBD survey to qualify demand
+3. `/interview-guide` to run discovery interviews and extract user jobs and pain points
+4. `/voice-of-customer` to synthesize cross-channel signals into a consolidated VoC report
+5. `/prd-draft` to spec the feature with research-backed requirements
 
 ## Context Management
 
@@ -435,6 +497,14 @@ Use web search when:
 - **Journey Maps:** `outputs/journey-maps/` (user/customer journey maps)
 - **Weekly Plans:** `outputs/weekly-plans/` (weekly priority plans)
 - **Weekly Reviews:** `outputs/weekly-reviews/` (weekly retrospectives)
+- **Surveys:** `outputs/surveys/` (survey designs from `/survey-builder`)
+- **Business Canvases:** `outputs/business-canvases/` (BMC and Lean Canvas outputs)
+- **Win/Loss:** `outputs/win-loss/` (win/loss analyses from `/win-loss-analysis`)
+- **Pre-Mortems:** `outputs/pre-mortems/` (pre-mortem risk registers)
+- **OKRs:** `outputs/okrs/` (OKR planning documents from `/okr-planning`)
+- **Board Decks:** `outputs/board-decks/` (executive presentation outlines from `/board-deck`)
+- **Content:** `outputs/content/` (launch announcements, changelogs, onboarding copy from `/content-marketing`)
+- **Post-Mortems:** `outputs/post-mortems/` (blameless post-mortem reports from `/post-mortem`)
 
 **Templates:**
 - `templates/` contains empty templates (PRD template, interview template, launch checklist template, etc.)
@@ -552,6 +622,12 @@ When the PM first launches Claude Code in this workspace:
    - "Upload a meeting transcript and run `/meeting-notes`"
    - "Have a PRD idea? Run `/prd-draft` to create your first PRD"
    - "Run `/weekly-plan` to set this week's priorities"
+   - "Want to measure product-market fit or pricing sensitivity? Run `/survey-builder` to design a research-grade survey"
+   - "Planning a launch? Run `/pre-mortem` to surface what could go wrong before it does"
+   - "Need to set quarterly OKRs? Run `/okr-planning` to create aligned, measurable goals"
+   - "Sizing an opportunity? Run `/opportunity-sizing` to get a TAM/SAM/SOM breakdown with strategic fit assessment"
+   - "Dealing with an incident or missed launch? Run `/post-mortem` for a blameless retrospective"
+   - "Need to prioritize feature requests? Run `/feature-request-analysis` to cluster and score by strategic fit"
 
 **Graceful Degradation:**
 - If PM skips MCPs: System still works (file-based + manual input)
