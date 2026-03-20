@@ -1,40 +1,21 @@
-# License
+MIT License
 
-## PM Operating System - Commercial License
+Copyright (c) 2026
 
-Copyright (c) 2024-2026 Aakash Gupta. All rights reserved.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-### Terms of Use
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-This PM Operating System ("Product") is licensed, not sold. By purchasing or using this Product, you agree to the following terms:
-
-**1. Grant of License**
-Upon purchase, you are granted a non-exclusive, non-transferable license to:
-- Use the Product for your personal or internal business purposes
-- Modify the Product for your own use
-- Create derivative works based on the Product for your own use
-
-**2. Restrictions**
-You may NOT:
-- Redistribute, resell, or sublicense the Product or any portion thereof
-- Share access to the Product with individuals who have not purchased a license
-- Remove or alter any copyright notices or attributions
-- Use the Product to create a competing product or service for sale
-
-**3. Ownership**
-The Product and all intellectual property rights therein remain the exclusive property of the copyright holder. This license does not grant you any ownership rights.
-
-**4. Updates**
-License holders may receive updates to the Product at the discretion of the copyright holder.
-
-**5. Disclaimer**
-THE PRODUCT IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. THE COPYRIGHT HOLDER SHALL NOT BE LIABLE FOR ANY DAMAGES ARISING FROM THE USE OF THIS PRODUCT.
-
-**6. Termination**
-This license is effective until terminated. It will terminate automatically if you fail to comply with any term of this license.
-
----
-
-For questions about licensing, contact: productgrowthppp@gmail.com
-
-For additional licenses (team, enterprise), contact: productgrowthppp@gmail.com
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
