@@ -456,6 +456,65 @@ If any check fails, fix it before delivering. Bad tickets slow engineering down 
 
 ---
 
+## Mode: --quick (Fast Issue Capture)
+
+Use `/create-tickets --quick` to capture a bug or feature request mid-development without the full ticket ceremony. You're in the zone and thought of something. Log it fast, get back to work.
+
+```
+/create-tickets --quick
+/create-tickets --quick "Login button broken on mobile Safari"
+```
+
+**Time:** Under 60 seconds.
+
+### What Gets Captured
+
+The skill captures exactly 5 fields:
+
+1. **Title:** One-line description (auto-formatted to `[Component] Action` style)
+2. **TL;DR:** 1-2 sentences on what's happening
+3. **Current vs Expected:** What's broken vs what should happen (bugs) or what's missing vs what's needed (features)
+4. **Relevant Files:** Files involved (auto-detected from current context if in a codebase, max 3)
+5. **Priority:** Critical / High / Medium / Low (default: Medium)
+
+### How It Works
+
+- **Ask only what's missing.** If the user gives a one-liner like "login broken on mobile", ask 1-2 targeted follow-up questions, not a checklist.
+- **Auto-detect files** from the current working context when possible.
+- **Default priority to Medium** unless the user says otherwise.
+- **Skip everything else.** No acceptance criteria, no effort estimation, no dependency mapping. That comes later during sprint planning.
+
+### Output
+
+**If Linear/Jira MCP connected:** Creates ticket directly with a "triage" label.
+
+**If not connected:** Appends to `outputs/analyses/quick-issues-[date].md` as a running log:
+
+```markdown
+---
+
+### [Title]
+**Type:** Bug / Feature / Improvement
+**Priority:** Medium
+**TL;DR:** [1-2 sentences]
+**Current:** [What happens now]
+**Expected:** [What should happen]
+**Files:** `path/to/file.ts`, `path/to/other.ts`
+**Logged:** [timestamp]
+
+---
+```
+
+### Rules
+- No acceptance criteria (this is capture, not specification)
+- No effort estimation (that comes during `/sprint-planning`)
+- No dependency mapping (too slow for quick capture)
+- Auto-tag with "triage" label so the team knows it needs refinement
+- Total interaction: 1-2 messages max, under 60 seconds
+- Be conversational and brief. Respect the PM's flow.
+
+---
+
 ## Mode: --stories (User Story Format)
 
 Use `/create-tickets --stories` to generate tickets specifically as user stories with INVEST criteria — focused on outcomes, not implementation.

@@ -377,7 +377,9 @@ Red flags to avoid:
 
 ### Mock Interview Mode
 
-**If the PM says "mock interview", enter this mode:**
+Use `/interview-prep --mock` for a live mock interview, or `/interview-prep --mock --brutal` for brutally honest coaching.
+
+**If the PM says "mock interview" or uses `--mock`, enter this mode:**
 
 1. **Ask for setup:**
    - "What interview type? (Product Sense / Execution / Behavioral / Design)"
@@ -388,9 +390,16 @@ Red flags to avoid:
    - Pick a realistic question for the company and interview type
    - Say: "Your time starts now. Take a moment to structure your thoughts, then walk me through your answer."
 
-3. **Wait for their full answer.** Do not interrupt. Let them finish.
+3. **Stay in character as the interviewer.** Do NOT break character to provide coaching mid-answer. If the PM struggles, let them struggle. A real interviewer would. Only exit interviewer mode when the PM says "feedback" or "stop."
+   - You may ask natural follow-up questions like a real interviewer would: "Can you go deeper on the metrics?" or "How would you prioritize those?"
+   - Do NOT say things like "Good point! Here's a tip..." mid-interview. Save it for feedback.
 
-4. **Provide structured feedback:**
+4. **When the PM says "feedback", provide structured feedback:**
+
+**`--brutal` mode:** If the PM used the `--brutal` flag, be brutally honest. No sugar-coating. Examples:
+- Instead of "There's room for improvement in your metrics section" say "Your metrics were vague and generic. An interviewer at [Company] would have stopped listening after 'increase engagement.' Give me a specific number."
+- Instead of "Consider being more structured" say "You rambled for 3 minutes without a framework. The interviewer checked out after 60 seconds. Structure first, then talk."
+- Still be constructive. Brutal honesty means specificity and directness, not cruelty. Every criticism should include what a strong answer looks like.
 
 ```
 ## Mock Interview Feedback

@@ -26,6 +26,7 @@ Connect to codebase and build initial implementation of a feature. Single-pass d
 - `/code-first-draft` - Build feature from PRD
 - `/code-first-draft [prd-name]` - Build specific PRD
 - `/code-first-draft --explore-only` - Just explore codebase, don't write code yet
+- `/code-first-draft --from-plan [plan-file]` - Execute step-by-step from an execution plan
 
 ---
 
@@ -232,6 +233,35 @@ Before choosing the prototype tech stack, check `context-library/business-info-t
 
 **When presenting to PM:**
 > "No codebase detected, so I built a standalone reference prototype using [stack]. This is not production code -- share it with engineering as a starting point for the real implementation. They should adapt it to your actual codebase patterns, auth system, and infrastructure."
+
+---
+
+## Mode: --from-plan (Execute from Execution Plan)
+
+Use `/code-first-draft --from-plan [plan-file]` to implement step-by-step from an execution plan created by `/execution-plan`.
+
+```
+/code-first-draft --from-plan
+/code-first-draft --from-plan outputs/plans/plan-auth-2026-04-01.md
+```
+
+### How It Works
+
+1. **Read the plan file** from `outputs/plans/`. If no file specified, auto-detect the most recent plan.
+2. **Find the next not-started step** (white square emoji)
+3. **Update that step to in-progress** (yellow square emoji)
+4. **Implement the step** following all the normal code-first-draft rules (match patterns, write tests, follow PRD)
+5. **Update the step to done** (green square emoji) and update the progress percentage
+6. **Ask:** "Step X complete. Move to step Y, or stop here?"
+
+### Rules
+
+- **One step at a time.** Get confirmation before proceeding to the next step.
+- **Update the plan file in place** after each step (status emoji + progress percentage).
+- **If a step is blocked** (dependencies not met), mark it with a red square and skip to the next available step. Explain what's blocking it.
+- **If implementation reveals the plan needs adjustment**, flag it: "Step 5 is more complex than expected. Suggest splitting into 5a and 5b." Update the plan with PM approval.
+- **All normal code-first-draft quality standards apply** (tests, patterns, accessibility, etc.).
+- **Report after each step:** What was implemented, what files changed, any deviations from the plan.
 
 ---
 

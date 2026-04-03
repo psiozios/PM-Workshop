@@ -130,7 +130,7 @@ When the PM uses a skill command (e.g., `/prd-draft`, `/meeting-notes`), Claude 
 
 All skills are registered as native slash commands. You can invoke them by typing `/skill-name` or Claude may auto-load them when relevant.
 
-**Available Skills (62 total - fully context-aware and cross-integrated):**
+**Available Skills (69 total - fully context-aware and cross-integrated):**
 
 All skills now check your workspace context first, reference related analyses, and connect insights like a real PM would.
 
@@ -156,7 +156,7 @@ All skills now check your workspace context first, reference related analyses, a
 
 **User Research & Interviews:**
 - `/user-interview` - Process interviews (checks past interviews, validates themes, suggests follow-ups)
-- `/interview-prep` - PM job interview preparation (Product Sense, Execution, Behavioral frameworks and practice)
+- `/interview-prep` - PM job interview preparation (Product Sense, Execution, Behavioral frameworks and practice; `--mock` for live mock interviews, `--brutal` for brutally honest coaching)
 - `/interview-guide` - Create JTBD interview guides (includes 63-question curated library organized by phase; checks existing research, deduplicates questions)
 - `/interview-feedback` - Post-PM-interview debrief and continuous improvement for job search
 - `/user-research-synthesis` - Turn interviews into insights (shows recurring themes, links to decisions/PRDs)
@@ -199,15 +199,24 @@ All skills now check your workspace context first, reference related analyses, a
 - `/sales-battlecard` - Create competitive battle cards for sales (30-sec pitch, differentiation proofs, objection handling, landmine questions, proof points)
 
 **Development & Execution:**
-- `/create-tickets` - Create tickets via MCP or formatted text (links to PRDs, auto-populates context from meetings)
+- `/create-tickets` - Create tickets via MCP or formatted text (links to PRDs, auto-populates context; `--quick` for fast mid-dev issue capture, `--stories` for user story format)
 - `/launch-checklist` - Comprehensive product launch planning (prioritized checklist with owners, dependencies, critical path)
 - `/pre-mortem` - Run structured pre-mortem sessions before launches or major decisions (surfaces failure modes via past-tense failure imagination; risk register with mitigations)
-- `/code-first-draft` - Initial feature implementation from PRD specs (explores codebase, creates implementation plan, writes code with tests)
+- `/code-first-draft` - Initial feature implementation from PRD specs (explores codebase, creates implementation plan, writes code with tests; `--from-plan` to execute from execution plans step-by-step)
 - `/sprint-planning` - Sprint planning and backlog grooming (capacity planning, story estimation, sprint goals, team readiness checks)
 - `/analytics-instrumentation` - Design tracking plans before engineering ships (event taxonomy, naming conventions, user properties, funnel design, QA checklist)
 - `/deprecation-plan` - Plan and execute feature deprecations (impact analysis, migration paths, communication timeline, sunset go/no-go checklist)
 - `/post-mortem` - Blameless post-mortem after incidents, failed launches, or missed goals (timeline, impact, root cause, response quality, action items)
 - `/ai-quality-debug` - Evaluate and debug AI feature quality as a PM (four modes: define quality criteria, evaluate outputs, diagnose regressions, go/no-go decision)
+- `/explore-codebase` - Pre-implementation codebase exploration (maps dependencies, identifies edge cases, surfaces questions; does NOT write code)
+- `/execution-plan` - Create tracked markdown execution plans with emoji status tracking, progress percentage, and critical decisions
+- `/code-review` - Comprehensive code review across 8 dimensions (error handling, types, security, performance, architecture; severity levels CRITICAL/HIGH/MEDIUM/LOW)
+- `/peer-review` - Cross-model code review verification (evaluates another AI's findings against actual code; identifies false positives)
+- `/update-docs` - Post-change documentation updates (reads git diff, verifies actual implementation, updates CHANGELOG and docs)
+- `/cto-consult` - CTO simulation for technical pushback (challenges scope, breaks work into phases, creates per-phase implementation prompts with status report expectations)
+
+**Learning & Growth:**
+- `/learning-mode` - Three-level teaching mode for technical PMs (Core Concept, How It Works, Deep Dive; uses your codebase for examples; 80/20 focus on compounding concepts)
 
 **Fun:**
 - `/ralph-wiggum` - Devil's advocate PRD/document reviewer with humor and sharp critique (finds logical gaps, questionable assumptions, and missing data)
@@ -411,6 +420,25 @@ These workflows chain skills together for common PM activities:
 4. `/voice-of-customer` to synthesize cross-channel signals into a consolidated VoC report
 5. `/prd-draft` to spec the feature with research-backed requirements
 
+**Build with AI Workflow (for PMs who code):**
+1. `/cto-consult` to get pushback on your idea and a phased plan
+2. `/explore-codebase` to understand the relevant code before building
+3. `/execution-plan` to create a tracked step-by-step plan
+4. `/code-first-draft --from-plan` to implement each step with status tracking
+5. `/code-review` to review what you built
+6. `/update-docs` to update documentation after changes
+7. `/create-tickets --quick` for issues discovered along the way
+
+**Code Quality Workflow:**
+1. `/code-review` to get Claude's review of changes
+2. `/peer-review` to verify findings from another AI tool's review
+3. `/create-tickets` to turn confirmed issues into fix tickets
+
+**Learning While Building:**
+1. Hit an unfamiliar concept during any development skill
+2. `/learning-mode` to understand the concept at three levels
+3. Return to the development skill with better understanding
+
 ## Context Management
 
 **When to use `clear`:**
@@ -505,6 +533,7 @@ Use web search when:
 - **Board Decks:** `outputs/board-decks/` (executive presentation outlines from `/board-deck`)
 - **Content:** `outputs/content/` (launch announcements, changelogs, onboarding copy from `/content-marketing`)
 - **Post-Mortems:** `outputs/post-mortems/` (blameless post-mortem reports from `/post-mortem`)
+- **Execution Plans:** `outputs/plans/` (tracked execution plans from `/execution-plan`)
 
 **Templates:**
 - `templates/` contains empty templates (PRD template, interview template, launch checklist template, etc.)
