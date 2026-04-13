@@ -7,13 +7,13 @@ Your AI-powered copilot for modern product management. Built for Claude Code.
 Most PMs use AI the same way they use Google: one-off questions, zero context. This system works differently.
 
 - **Context over prompting.** AI is only as good as the context you give it. PM Workshop organizes your company knowledge, writing styles, stakeholder profiles, and past decisions so every output sounds like it came from someone who actually works there.
-- **Workflows, not chat.** 69 slash commands cover the full PM loop: strategy, research, PRDs, metrics, meetings, launches, prototyping, code, and retrospectives. Each one builds on the others.
+- **Workflows, not chat.** 70 slash commands cover the full PM loop: strategy, research, PRDs, metrics, meetings, launches, prototyping, code, and retrospectives. Each one builds on the others.
 - **Ship the draft, then iterate.** Documents are living artifacts. A 1-page PRD that ships Monday beats a 10-page spec that ships never.
 
 ## What You Get
 
 - **Pre-built context library** with templates for company info, writing styles, stakeholder profiles, and strategic frameworks (7 Powers, JTBD, PLG Iceberg, Growth Loops, and more)
-- **69 slash commands** for recurring PM tasks, from PRDs and meeting notes to pricing analysis and code reviews
+- **70 slash commands** for recurring PM tasks, from PRDs and meeting notes to pricing analysis and code reviews
 - **7 sub-agents** for multi-perspective reviews (engineer, designer, executive, legal, UX researcher, skeptic, customer voice)
 - **Knowledge assets** including 63 curated interview questions, validated survey templates, canvas templates, and 139 AI prompt references
 - **Example PRDs** demonstrating modern best practices
@@ -89,7 +89,7 @@ pm-workshop/
 ├── LICENSE.md                      # MIT License
 │
 ├── .claude/
-│   └── skills/                     # 69 registered slash commands
+│   └── skills/                     # 70 registered slash commands
 │
 ├── setup/                          # Installation and configuration guides
 ├── advanced/                       # Advanced workflows and automation
@@ -143,7 +143,7 @@ Unlike ChatGPT or regular Claude:
 ### Three Layers of Context
 
 1. **Project Knowledge** (`context-library/`) - Company info, writing styles, stakeholder profiles, strategy frameworks, and past decisions that apply across all your work
-2. **Skills** (`.claude/skills/`) - 69 registered slash commands for recurring tasks, each with built-in context routing and cross-skill integration
+2. **Skills** (`.claude/skills/`) - 70 registered slash commands for recurring tasks, each with built-in context routing and cross-skill integration
 3. **Sub-Agents** (`sub-agents/`) - 7 specialized reviewers for multi-perspective feedback
 
 When you ask Claude to draft a PRD, it automatically:
@@ -153,7 +153,7 @@ When you ask Claude to draft a PRD, it automatically:
 - Checks alignment with your strategy and OKRs
 - Includes real examples from your library
 
-## Available Skills (69 Total)
+## Available Skills (70 Total)
 
 Type `/` in Claude Code to see the autocomplete menu with all commands.
 
@@ -233,10 +233,11 @@ Type `/` in Claude Code to see the autocomplete menu with all commands.
 | `/napkin-sketch` | ASCII wireframes and browser capture |
 | `/prototype-feedback` | Build, review, iterate workflow (supports `--design`) |
 
-### Development and Execution (15)
+### Development and Execution (16)
 | Command | What it does |
 |---------|-------------|
 | `/create-tickets` | Create tickets via Linear/Jira MCP or formatted text (supports `--quick`, `--stories`) |
+| `/autoresearch` | Run autonomous keep/discard experiment loops against a measurable metric across code, analytics, and PM workflows |
 | `/launch-checklist` | Comprehensive launch planning (supports `--testplan`) |
 | `/pre-mortem` | Structured pre-mortem before launches or major decisions |
 | `/post-mortem` | Blameless post-mortem after incidents or failed launches |
