@@ -251,3 +251,26 @@ Run `/meeting-notes` and update `context-library/stakeholder-template.md` with a
 - [ ] **Fallback defined:** Not walking in without a Plan B
 - [ ] **Post-meeting capture planned:** Update stakeholder profiles after the conversation
 - [ ] **Output saved:** `outputs/analyses/stakeholder-[initiative]-[date].md`
+
+---
+
+## Second Brain Integration
+
+The `stakeholders` focus area of the second brain is now the **canonical store** for stakeholder profiles, replacing a parallel local store. `/stakeholder-tactics --map` reads from and writes to `context-library/second-brain/stakeholders/wiki/`.
+
+**Before any mode runs:** query the `stakeholders` focus area for the relevant person or group. Pull:
+- Communication preferences (channel, cadence, depth)
+- Priorities (stated and inferred)
+- Past decisions involving them and how they went
+- Relationship history (trust level, friction points, wins)
+- Signals from recent meetings (filed there by `/meeting-notes`)
+
+**At the end of any mode that produces new stakeholder information, offer: "File to Second Brain? (y/n)"**
+
+If yes, ingest into `stakeholders`:
+- `--map` creates or updates a wiki page per stakeholder (one page per person, aggressive `[[cross-links]]` between people on the same team or in the same reporting chain)
+- `--align`, `--conflict`, `--prep` modes add new observations as updates to existing pages
+
+Invoke `/second-brain ingest` with the output as the source. If `stakeholders` doesn't exist yet, offer `/second-brain init stakeholders` first.
+
+Stakeholder memory is the hardest PM knowledge to keep because it lives in dozens of meetings. The brain is where that memory actually sticks.

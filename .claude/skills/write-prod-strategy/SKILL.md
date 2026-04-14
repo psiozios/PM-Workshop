@@ -751,3 +751,21 @@ Before delivering the strategy document, verify:
 - [ ] **Length is appropriate:** Full strategy: 2,000-3,000 words. Brief: ~500 words. If significantly over, cut redundancy. If significantly under, check for missing components.
 
 Remember: A good strategy is a clear "no" to many things and a committed "yes" to a few. Strategy is about choices, not wishes.
+
+---
+
+## Second Brain Integration
+
+A product strategy is only as credible as the evidence behind it. Before writing, query the second brain across every focus area:
+
+- **`product-knowledge`** for the product reality (what we are, what we're not, what's load-bearing)
+- **`customer-insights`** for the user reality (who they are, what jobs they hire us for, where we fall short)
+- **`competitive-intelligence`** for the market reality (who we're competing against on which axes, where the gaps are)
+- **`decisions`** for the strategic history (what we've decided before that this strategy either builds on or explicitly reverses)
+- **`domain-knowledge`** for methodology learnings (what kinds of strategy claims have been right or wrong for us in the past)
+
+Every component of the 7-component framework — vision, users, superpowers, pillars, non-goals, impact, roadmap — should cite specific wiki pages or raw sources where possible. A strategy without citations is a set of opinions. A strategy with citations is a set of committed beliefs backed by evidence.
+
+At the end, offer to file the strategy into `domain-knowledge` (process learnings) and key claims into `product-knowledge` (what we now believe about ourselves).
+
+If the brain isn't initialized, fall back to `context-library/strategy/` and `context-library/research/` — this hook sharpens the strategy, doesn't gate it.

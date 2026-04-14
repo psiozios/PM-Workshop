@@ -987,3 +987,20 @@ If we [build X], then [users will Y], because [underlying insight].
 **Output:** `outputs/prds/brief-[feature]-[date].md`
 **Escalate to:** `/prd-draft` (full) when the feature is prioritized
 ```
+
+---
+
+## Second Brain Integration
+
+Before drafting, query the second brain for the **Background / Context** section. A good PRD starts with evidence, not assumptions. Pull from:
+
+- **`product-knowledge`** — what we already know about this product area, constraints, dependencies
+- **`customer-insights`** — the customer pain, jobs-to-be-done, verbatim quotes from prior research
+- **`competitive-intelligence`** — how competitors solve this today, positioning gaps
+- **`decisions`** — past decisions in this area that constrain or inform the current one
+
+Equivalent of `/second-brain query "background context for <feature>" --focus=<each>`. Pull facts with `[Source:]` citations directly into the PRD's Context section so stakeholders can click through to the evidence.
+
+If the brain is thin on this topic, flag it at the top of the PRD ("evidence gap: we don't yet have wiki pages for X, Y"). That's a research task, not a blocker — but it should be visible.
+
+If `context-library/second-brain/` isn't initialized, proceed without — this hook is a force multiplier, not a prerequisite.

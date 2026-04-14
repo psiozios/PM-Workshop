@@ -717,3 +717,24 @@ Before delivering the weekly review, verify:
 - [ ] **Metrics referenced where available:** If launches happened or metrics data exists, actual numbers are cited (not just "things went well").
 - [ ] **Appropriate length:** Default review is ~150 lines. Full review is longer but still organized with clear section headers. Do not generate a full review unless the user asked for one.
 - [ ] **Honest about what did not go well:** The review includes at least one thing that did not go as planned, with root cause analysis. A review with only wins is incomplete.
+
+---
+
+## Second Brain Integration
+
+**Before reviewing:** optionally query the `domain-knowledge` focus area for patterns from prior weekly reviews (recurring blockers, underestimated task types, times of day you do best work). Reference them so this week's review compares against the trend, not just last week.
+
+**At the end of the run, offer: "File to Second Brain? (y/n)"**
+
+If yes, ingest into the `domain-knowledge` focus area:
+- Lessons learned (what you'd do differently)
+- Surprising patterns (something that keeps happening you hadn't noticed)
+- Calibration data (estimates vs. actuals — if you thought X would take 2 days and it took 5, that's data)
+- Stakeholder patterns (behavior you noticed this week)
+- Process notes (what workflows worked, what didn't)
+
+For stakeholder patterns specifically, also ingest into `stakeholders`. For decision outcomes where the result is now visible, also ingest into `decisions` as an `update` to the original decision page.
+
+Invoke `/second-brain ingest` with the review as the source. If `domain-knowledge` doesn't exist yet, offer `/second-brain init domain-knowledge` first.
+
+Weekly reviews without accumulation are confessional journaling. Weekly reviews that feed the brain become your personal operating manual — one that gets sharper every Friday.

@@ -656,3 +656,22 @@ Before presenting output to the PM, verify:
 - [ ] **Recommendations linked to specific product areas:** Each recommendation names a concrete feature, flow, or product area it applies to (not "improve the experience")
 - [ ] **Contradictory findings explicitly flagged:** Any cases where users disagreed or data conflicted are called out in a dedicated section with both perspectives presented
 - [ ] **Handoff to `/prd-draft` suggested:** If actionable findings exist that could become features, the output explicitly suggests running `/prd-draft` as a next step
+
+---
+
+## Second Brain Integration
+
+**Before synthesizing:** query the `customer-insights` focus area for existing themes. Your new round of interviews should confirm, extend, or contradict what's already there — not start from scratch. Surface prior themes with `[Source:]` citations so the new synthesis shows how understanding is evolving.
+
+**At the end of the run, offer: "File to Second Brain? (y/n)"**
+
+If yes, ingest into the `customer-insights` focus area:
+- Consolidated themes (one wiki page per theme, or update existing theme pages with new evidence)
+- Jobs-to-be-done statements
+- Verbatim quotes worth remembering (with participant attribution)
+- Segment-specific findings
+- Contradictions flagged when new interviews disagreed with older ones
+
+Invoke `/second-brain ingest` with the synthesis file as the source. If `customer-insights` doesn't exist yet, offer `/second-brain init customer-insights` first.
+
+One research round is a snapshot. The brain is how snapshots compound into a picture of who your customers actually are.

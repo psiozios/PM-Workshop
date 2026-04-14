@@ -232,3 +232,22 @@ If you only have one source (e.g., just NPS verbatims or just support tickets), 
 - [ ] **Product implications actionable:** "Build / Fix / Communicate / Investigate" — not "consider improving"
 - [ ] **Churn signal called out:** Any cancellation or switching mentions flagged explicitly
 - [ ] **Output saved:** `outputs/research-synthesis/voc-report-[period]-[date].md`
+
+---
+
+## Second Brain Integration
+
+**Before aggregating:** query the `customer-insights` focus area for prior VoC themes. The goal is to compare this period against the baseline — what's new, what's persistent, what's faded. Pull prior theme counts and sentiment.
+
+**At the end of the run, offer: "File to Second Brain? (y/n)"**
+
+If yes, ingest into `customer-insights`:
+- Consolidated themes with source counts (e.g., "Billing confusion — 23 mentions across support, sales, NPS")
+- Trends vs. last period (new themes, intensifying themes, fading themes)
+- Churn/cancellation signals
+- Competitor mentions (also cross-file into `competitive-intelligence`)
+- Praise worth preserving (what's working)
+
+Invoke `/second-brain ingest` with the VoC report as the source. Competitor mentions get a second ingest into `competitive-intelligence`.
+
+VoC is inherently comparative — a report without a baseline is half a report. The brain is the baseline.

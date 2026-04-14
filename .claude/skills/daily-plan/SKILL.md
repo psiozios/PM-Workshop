@@ -928,3 +928,16 @@ Total time: 2 minutes
 **Parallel use:**
 - `/prd-draft` - Write PRDs during free blocks
 - `/impact-sizing` - Analyze features during planning time
+
+---
+
+## Second Brain Integration
+
+When today's calendar includes meetings or work on specific topics (a customer, a competitor, a stakeholder, a decision), query the second brain for context before the day starts. The output of `/daily-plan` should include a **"What I should know today"** section pulling:
+
+- **Stakeholder prep** — for every 1:1 or meeting with a named person, query `stakeholders` for their preferences, recent signals, open asks
+- **Topic briefing** — for every meeting with a clear topic, equivalent of `/second-brain prep "<topic>"` for a one-paragraph assembled context
+- **Open threads** — scan `decisions` for any decision with a revisit trigger that's fired
+- **Gap flags** — if the brain has nothing on a meeting topic, note it so the PM arrives expecting to learn rather than present
+
+Five minutes of brain-assisted prep at 8am beats forty minutes scrambling between meetings. If the brain is empty, fall back to `context-library/meetings/` and `stakeholder-template.md` as before.

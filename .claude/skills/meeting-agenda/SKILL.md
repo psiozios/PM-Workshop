@@ -830,3 +830,23 @@ Topics to rotate: feedback on recent work / skills developing / growth goals / e
 ```
 
 **Anti-patterns:** Status report that could be email / no agenda / no follow-through on prior items / skipping when "things are good" (that's when relationship-building matters most)
+
+---
+
+## Second Brain Integration
+
+Before composing the agenda, run the equivalent of `/second-brain prep "<meeting topic or attendee>"`. The prep briefing gives you:
+
+- **Current state** on the topic (what the brain knows, with citations)
+- **Key tensions** (contradictions, open debates, unresolved trade-offs)
+- **Open questions** (what we don't yet know — great agenda items)
+- **Recommendation** (what I'd argue for, given the evidence)
+
+Use that briefing to:
+- Seed the agenda's context section (no more "let's sync on X" — instead "given our Q2 data from the wiki, decide on Y")
+- Surface the right discussion items (the tensions and open questions *are* the agenda)
+- Pre-answer questions the group might ask (so the meeting focuses on decisions, not info transfer)
+
+For `--oneonone` mode specifically, also query `stakeholders` for the person's recent signals and open asks so the agenda starts with "what's on your mind" but is informed by everything the brain knows.
+
+If the brain isn't initialized, fall back to the existing `context-library/meetings/` and `stakeholder-template.md` lookups — the agenda still works, just with less connective tissue.

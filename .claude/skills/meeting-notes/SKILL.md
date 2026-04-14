@@ -1026,3 +1026,20 @@ Before presenting the meeting notes, verify:
 ---
 
 **Remember:** The best meeting notes are the ones you actually create. Don't let perfect be the enemy of done. Process them quickly, share them widely, and use them to drive action.
+
+---
+
+## Second Brain Integration
+
+Before generating the meeting notes, check `context-library/second-brain/` for prior context on the topic and attendees (focus areas: `stakeholders`, plus whatever topic domain — `product-knowledge`, `competitive-intelligence`, etc.). Pull any relevant past decisions or discussions so the new notes build on what's already known rather than rehashing.
+
+**At the end of the run, offer: "File to Second Brain? (y/n)"**
+
+If yes, distill and ingest into:
+- **Key decisions made** → `decisions` focus area
+- **New facts learned about the product/customer/competitor** → whichever topic focus area applies
+- **Stakeholder signals (preferences, changed priorities, relationship dynamics)** → `stakeholders` focus area
+
+Invoke `/second-brain ingest` with the meeting notes file as the source. If a relevant focus area doesn't exist yet, offer to `/second-brain init` it first.
+
+Don't file the whole transcript — file the **claims that should survive next month**. Everything else stays in `outputs/meeting-notes/`.

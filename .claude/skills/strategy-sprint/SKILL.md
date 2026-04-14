@@ -361,3 +361,21 @@ Before delivering the strategy document, verify:
 ---
 
 **Framework credit:** Adapted from Aakash Gupta's strategy framework. Read the full article: https://www.news.aakashg.com/p/strategy-in-1-day-week-month
+
+---
+
+## Second Brain Integration
+
+Strategy is evidence-heavy. Before writing, query the second brain for the evidence base:
+
+- **`product-knowledge`** — product truths, activation and retention baselines, known constraints
+- **`customer-insights`** — which jobs matter to whom, what's painful, what users are workaround-ing
+- **`competitive-intelligence`** — positioning map, pricing reality, what competitors are doing that we're not
+- **`decisions`** — prior strategic decisions that constrain or inform this sprint (don't re-litigate settled debates)
+- **`domain-knowledge`** — learnings from past strategy cycles (what we tried, what worked, what didn't)
+
+For 1-week and 1-month tiers especially, treat the brain as the **raw material** and this skill as the **synthesis**. Every claim in the strategy doc should cite a wiki page or `raw/` source. Where the brain is thin, the strategy flags "low-confidence claim — research needed."
+
+At the end of the sprint, offer to file the final strategy doc back into `domain-knowledge` so next quarter's sprint starts one step ahead.
+
+If the brain isn't initialized, the skill falls back to `context-library/strategy/` and `context-library/research/` as before. The brain makes this skill sharper; it doesn't gate it.

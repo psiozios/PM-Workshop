@@ -965,3 +965,24 @@ Hybrid options:
 
 **Gut check:** Which of these options, if it worked, would create the best outcome? Start there.
 ```
+
+---
+
+## Second Brain Integration
+
+**Before framing the decision:** query the `decisions` focus area for related past decisions. Don't re-litigate a debate that was already settled — reference it. Run equivalent of `/second-brain query "past decisions about <topic>" --focus=decisions` and surface any matches with `[Source:]` citations.
+
+**Also pull evidence** from other focus areas relevant to the decision (e.g., `customer-insights` if customer impact matters, `competitive-intelligence` if competitive positioning is at stake).
+
+**At the end of the run, offer: "File to Second Brain? (y/n)"**
+
+If yes, ingest into the `decisions` focus area:
+- The decision itself (one-line)
+- Options considered and trade-offs
+- Rationale for the choice
+- Revisit trigger (what would change our mind)
+- Who owns follow-through
+
+Invoke `/second-brain ingest` with the decision doc as the source. If `decisions` doesn't exist yet, offer `/second-brain init decisions` first.
+
+The brain is where decisions go to be remembered. The outputs folder is where they go to be found once; the brain is where they go to inform every future decision.

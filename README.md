@@ -7,13 +7,13 @@ Your AI-powered copilot for modern product management. Built for Claude Code.
 Most PMs use AI the same way they use Google: one-off questions, zero context. This system works differently.
 
 - **Context over prompting.** AI is only as good as the context you give it. PM Workshop organizes your company knowledge, writing styles, stakeholder profiles, and past decisions so every output sounds like it came from someone who actually works there.
-- **Workflows, not chat.** 70 slash commands cover the full PM loop: strategy, research, PRDs, metrics, meetings, launches, prototyping, code, and retrospectives. Each one builds on the others.
+- **Workflows, not chat.** 71 slash commands cover the full PM loop: strategy, research, PRDs, metrics, meetings, launches, prototyping, code, knowledge management, and retrospectives. Each one builds on the others.
 - **Ship the draft, then iterate.** Documents are living artifacts. A 1-page PRD that ships Monday beats a 10-page spec that ships never.
 
 ## What You Get
 
 - **Pre-built context library** with templates for company info, writing styles, stakeholder profiles, and strategic frameworks (7 Powers, JTBD, PLG Iceberg, Growth Loops, and more)
-- **70 slash commands** for recurring PM tasks, from PRDs and meeting notes to pricing analysis and code reviews
+- **71 slash commands** for recurring PM tasks, from PRDs and meeting notes to pricing analysis, code reviews, and a compounding second-brain wiki
 - **7 sub-agents** for multi-perspective reviews (engineer, designer, executive, legal, UX researcher, skeptic, customer voice)
 - **Knowledge assets** including 63 curated interview questions, validated survey templates, canvas templates, and 139 AI prompt references
 - **Example PRDs** demonstrating modern best practices
@@ -89,7 +89,7 @@ pm-workshop/
 ├── LICENSE.md                      # MIT License
 │
 ├── .claude/
-│   └── skills/                     # 70 registered slash commands
+│   └── skills/                     # 71 registered slash commands
 │
 ├── setup/                          # Installation and configuration guides
 ├── advanced/                       # Advanced workflows and automation
@@ -99,6 +99,7 @@ pm-workshop/
 │   ├── strategy/                   # Strategy docs + frameworks
 │   ├── prds/                       # Your PRDs (reference)
 │   ├── research/                   # User research, competitive analysis
+│   ├── second-brain/               # LLM-maintained wikis (Karpathy pattern)
 │   ├── decisions/                  # Decision logs
 │   ├── launches/                   # Launch plans, release notes
 │   ├── metrics/                    # Analytics reports, A/B tests
@@ -143,7 +144,7 @@ Unlike ChatGPT or regular Claude:
 ### Three Layers of Context
 
 1. **Project Knowledge** (`context-library/`) - Company info, writing styles, stakeholder profiles, strategy frameworks, and past decisions that apply across all your work
-2. **Skills** (`.claude/skills/`) - 70 registered slash commands for recurring tasks, each with built-in context routing and cross-skill integration
+2. **Skills** (`.claude/skills/`) - 71 registered slash commands for recurring tasks, each with built-in context routing and cross-skill integration
 3. **Sub-Agents** (`sub-agents/`) - 7 specialized reviewers for multi-perspective feedback
 
 When you ask Claude to draft a PRD, it automatically:
@@ -153,7 +154,7 @@ When you ask Claude to draft a PRD, it automatically:
 - Checks alignment with your strategy and OKRs
 - Includes real examples from your library
 
-## Available Skills (70 Total)
+## Available Skills (71 Total)
 
 Type `/` in Claude Code to see the autocomplete menu with all commands.
 
@@ -258,6 +259,11 @@ Type `/` in Claude Code to see the autocomplete menu with all commands.
 |---------|-------------|
 | `/learning-mode` | Three-level teaching mode for technical PMs |
 
+### Knowledge Management (1)
+| Command | What it does |
+|---------|-------------|
+| `/second-brain` | Build and maintain a compounding PM knowledge base (Karpathy's LLM Wiki pattern); modes: `init`, `ingest`, `query`, `compile`, `explore`, `lint`, `prep`, `status` |
+
 ### Fun (1)
 | Command | What it does |
 |---------|-------------|
@@ -287,6 +293,9 @@ Monday `/weekly-plan` → daily workflow → Friday `/weekly-review` → `/statu
 
 **New Feature Research:**
 `/opportunity-sizing` → `/survey-builder` → `/interview-guide` → `/voice-of-customer` → `/prd-draft`
+
+**Second Brain (compounding knowledge):**
+`/second-brain init <focus>` → `/second-brain ingest <source>` → existing skills auto-file into the brain → `/second-brain query` before PRDs or strategy → weekly `/second-brain lint` + `/second-brain explore`
 
 ## Pro Tips
 

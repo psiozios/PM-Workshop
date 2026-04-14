@@ -30,6 +30,7 @@ The PM has organized their knowledge into this workspace. Always reference:
   - `hook-retain-expand-model.md` - User lifecycle and monetization phases
   - `ai-product-strategy.md` - Strategic considerations for AI products
 - `context-library/research/` for user research and competitive analysis
+- `context-library/second-brain/` for LLM-maintained wikis (Karpathy-style compounding knowledge base, powered by `/second-brain`; organized by focus area: product-knowledge, competitive-intelligence, customer-insights, stakeholders, decisions, domain-knowledge)
 - `context-library/decisions/` for decision logs and trade-off documents
 - `context-library/launches/` for launch plans, release notes, go-live docs
 - `context-library/metrics/` for analytics reports, A/B test results, dashboards
@@ -130,7 +131,7 @@ When the PM uses a skill command (e.g., `/prd-draft`, `/meeting-notes`), Claude 
 
 All skills are registered as native slash commands. You can invoke them by typing `/skill-name` or Claude may auto-load them when relevant.
 
-**Available Skills (70 total - fully context-aware and cross-integrated):**
+**Available Skills (71 total - fully context-aware and cross-integrated):**
 
 All skills now check your workspace context first, reference related analyses, and connect insights like a real PM would.
 
@@ -218,6 +219,9 @@ All skills now check your workspace context first, reference related analyses, a
 
 **Learning & Growth:**
 - `/learning-mode` - Three-level teaching mode for technical PMs (Core Concept, How It Works, Deep Dive; uses your codebase for examples; 80/20 focus on compounding concepts)
+
+**Knowledge Management:**
+- `/second-brain` - Build and maintain a compounding PM knowledge base inspired by Karpathy's LLM Wiki pattern (scaffolds focus-area wikis under `context-library/second-brain/`; modes: `init`, `ingest`, `query`, `compile`, `explore`, `lint`, `prep`, `status`; integrated with 7 skills that file into it and 5 skills that query it; every new source updates multiple pages, every good answer files back, knowledge compounds over time)
 
 **Fun:**
 - `/ralph-wiggum` - Devil's advocate PRD/document reviewer with humor and sharp critique (finds logical gaps, questionable assumptions, and missing data)
@@ -440,6 +444,14 @@ These workflows chain skills together for common PM activities:
 2. `/learning-mode` to understand the concept at three levels
 3. Return to the development skill with better understanding
 
+**Second Brain Workflow (compounding knowledge):**
+1. `/second-brain init <focus>` to scaffold a knowledge base (pick from defaults: product-knowledge, competitive-intelligence, customer-insights, stakeholders, decisions, domain-knowledge — or invent your own)
+2. `/second-brain ingest <source>` one at a time as you gather material; discuss takeaways, let the LLM cross-link aggressively
+3. Seven existing skills auto-file their outputs into the brain (`/meeting-notes`, `/decision-doc`, `/user-research-synthesis`, `/voice-of-customer`, `/competitor-analysis`, `/weekly-review`, `/stakeholder-tactics --map`)
+4. Before any PRD, strategy doc, or decision: `/second-brain query` or `/second-brain prep` to pull the evidence base with citations
+5. Weekly or every ~10 ingests: `/second-brain lint` for contradictions and `/second-brain explore` for unexplored connections
+6. Five skills auto-query the brain for context (`/prd-draft`, `/daily-plan`, `/meeting-agenda`, `/strategy-sprint`, `/write-prod-strategy`)
+
 ## Context Management
 
 **When to use `clear`:**
@@ -599,14 +611,23 @@ PM OS learns from how you work. After key interactions, I'll proactively update 
 
 ### How It Works
 
-I maintain a lightweight learning log at `context-library/pm-os-learning-log.md`. It tracks:
+Two complementary layers:
+
+**Lightweight learning log** at `context-library/pm-os-learning-log.md`:
 - Skill usage frequency and satisfaction signals
 - Writing style corrections and preferences
 - Stakeholder interaction patterns
 - Calibration data (impact estimates vs actuals)
 - Process notes (what workflows work, what doesn't)
 
-This file grows organically. Review it monthly to confirm or correct my observations. Delete entries that are wrong. That teaches me too.
+**Compounding second brain** at `context-library/second-brain/` (powered by `/second-brain`):
+- Concrete implementation of the self-updating idea
+- Focus-area wikis with cross-linked pages, citations, and contradiction flagging
+- `domain-knowledge` focus area captures ongoing PM learning (methodology, frameworks you've adapted, lessons from launches)
+- `stakeholders` focus area replaces the parallel stakeholder-profile store that `/stakeholder-tactics --map` used to maintain
+- `decisions` focus area is the queryable decision history that prevents re-relitigating old debates
+
+Both grow organically. Review monthly. Delete entries that are wrong. That teaches me too.
 
 ### Privacy & Control
 
