@@ -58,6 +58,7 @@ Ask the PM:
 3. **Fidelity level:** Quick sketch or polished demo?
 4. **Key user flows:** What paths must work?
 5. **Design system:** Match existing product or generic?
+6. **Design direction:** Did you run `/design-direction`? If so, I'll incorporate those parameters into the prompt.
 
 ### Step 2: Analyze Context
 
@@ -75,6 +76,29 @@ Extract:
 - Edge cases to demonstrate
 
 ### Step 3: Generate Prompt
+
+**Design Direction Integration (`--with-taste`):**
+
+Before generating the prompt, check if a design direction file exists at `outputs/prototypes/[feature]-design-direction.md`. If found (or if the PM passes `--with-taste`), prepend a Visual Style block to the generated prompt:
+
+```
+## Visual Style
+Style: [Preset name or parameter values from design direction]
+Feel: [Mood descriptors from design direction]
+Colors: [Specific palette from design direction or brand context]
+Typography: [Font choices from design direction]
+Spacing: [Grid and padding from design direction]
+Motion: [Animation level -- e.g., "Subtle hover states only" for Motion 0.2]
+Banned: [Anti-patterns from design direction -- e.g., "No AI purple, no emoji icons, no centered hero"]
+Reference: [Products cited in design direction]
+```
+
+**Tool-specific adaptations for taste parameters:**
+- **v0.dev:** Map to Tailwind classes and shadcn/ui component choices. Specify font via `className` prop.
+- **Lovable:** Map to design system references and color palette in the style section. Include Tailwind config overrides.
+- **Bolt.new:** Map to CSS custom properties and inline style preferences. Keep it concise.
+
+If no design direction exists, proceed normally. Optionally suggest: "Want to run `/design-direction` first to set the visual tone?"
 
 Create a structured prompt optimized for the target tool.
 

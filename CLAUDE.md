@@ -131,7 +131,7 @@ When the PM uses a skill command (e.g., `/prd-draft`, `/meeting-notes`), Claude 
 
 All skills are registered as native slash commands. You can invoke them by typing `/skill-name` or Claude may auto-load them when relevant.
 
-**Available Skills (71 total - fully context-aware and cross-integrated):**
+**Available Skills (73 total - fully context-aware and cross-integrated):**
 
 All skills now check your workspace context first, reference related analyses, and connect insights like a real PM would.
 
@@ -190,10 +190,12 @@ All skills now check your workspace context first, reference related analyses, a
 - `/pricing-analysis` - Design and analyze pricing strategy (four modes: pricing research, model selection, packaging design, competitive benchmarking)
 
 **Prototyping & Design:**
-- `/generate-ai-prototype` - Generate AI prototype prompts (references PRD requirements, past prototypes)
-- `/prototype` - Advanced prototyping with Artifacts, Figma, Lovable, v0, and Bolt (turns PRDs or feature descriptions into working prototypes)
+- `/design-direction` - Set and communicate design direction using a 3-parameter system (variance, motion, density); style presets (soft, minimal, brutalist); `--strict` for engineering-ready specs; `--for-designer`, `--for-v0`, `--for-prd` output modes
+- `/design-audit` - Structured 7-dimension design audit for existing UIs (typography, color, layout, interactivity, content, components, code quality); modes: `--competitor`, `--benchmark`, `--quick`
+- `/generate-ai-prototype` - Generate AI prototype prompts (references PRD requirements, past prototypes; `--with-taste` for design direction integration)
+- `/prototype` - Advanced prototyping with Artifacts, Figma, Lovable, v0, and Bolt (turns PRDs or feature descriptions into working prototypes; auto-loads design direction)
 - `/napkin-sketch` - ASCII wireframes + browser capture (matches PRD solution design)
-- `/prototype-feedback` - Build → review → iterate (checks PRD requirements, validates against research)
+- `/prototype-feedback` - Build → review → iterate (checks PRD requirements, validates against research; `--design` for 7-dimension visual critique)
 
 **Competitive Intelligence:**
 - `/competitor-analysis` - Deep analysis + ongoing monitoring (checks user research for mentions, sales/CS feedback, past analysis; two modes: comprehensive or monthly tracking; includes SWOT, Porter's Five Forces, PESTEL, and Ansoff Matrix frameworks)
@@ -443,6 +445,23 @@ These workflows chain skills together for common PM activities:
 1. Hit an unfamiliar concept during any development skill
 2. `/learning-mode` to understand the concept at three levels
 3. Return to the development skill with better understanding
+
+**Design-Led Prototyping:**
+1. `/design-direction` to set the visual tone (parameters, style preset, anti-patterns)
+2. `/generate-ai-prototype --with-taste` to inject direction into AI tool prompts
+3. `/prototype-feedback --design` to evaluate against the direction with 7-dimension scoring
+4. Iterate until the prototype matches the intended feel
+
+**Design Audit and Improve:**
+1. `/design-audit` to assess the current state of an existing UI or competitor
+2. `/design-direction` to set the target aesthetic for improvements
+3. `/prototype` to build an improved version following the new direction
+4. `/prototype-feedback --design` to validate the improvement
+
+**PRD with Design Direction:**
+1. `/prd-draft` to define the feature requirements
+2. `/design-direction --for-prd` to add a "Design Direction" section to the PRD
+3. `/prd-review-panel` to validate (designer sub-agent checks direction fit)
 
 **Second Brain Workflow (compounding knowledge):**
 1. `/second-brain init <focus>` to scaffold a knowledge base (pick from defaults: product-knowledge, competitive-intelligence, customer-insights, stakeholders, decisions, domain-knowledge — or invent your own)

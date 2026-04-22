@@ -34,6 +34,7 @@ Rapidly iterate on prototypes using AI-powered building and automated feedback c
 | Stakeholder Profiles | `context-library/stakeholder-*.md` | Who reviews this, their priorities and concerns |
 | User Research | `context-library/research/` | User pain points, quotes, behavior patterns |
 | Past Prototypes | `outputs/prototypes/` | Previous feedback rounds, resolved issues |
+| Design Direction | `outputs/prototypes/*-design-direction.md` | Target parameters (variance, motion, density), style preset, anti-patterns |
 
 ## Overview
 
@@ -455,7 +456,7 @@ If any check fails, fix it before delivering. Generic feedback wastes iteration 
 
 ## Mode: Visual Design Critique (--design)
 
-Use `/prototype-feedback --design` for focused visual design feedback — not UX/usability, but the visual layer: layout, hierarchy, spacing, color, typography, and consistency.
+Use `/prototype-feedback --design` for focused visual design feedback on in-progress prototypes. Applies the 7-dimension audit framework (shared with `/design-audit`) to catch visual quality issues before shipping.
 
 ```
 /prototype-feedback --design
@@ -463,58 +464,104 @@ Use `/prototype-feedback --design` for focused visual design feedback — not UX
 Paste a screenshot, Figma link, or describe what you see.
 Tell me: what's the context (new feature, redesign, marketing page) and who's the primary user.
 
-I'll apply visual design critique across 5 dimensions.
+I'll apply visual design critique across 7 dimensions and check against your design direction if one exists.
 ```
 
-### Visual Design Critique Framework
+**Note:** For auditing existing/shipped UIs or competitor products, use `/design-audit` instead. This mode is for prototypes still in development.
 
-**1. Visual Hierarchy**
-- Does the most important element command the most attention?
-- Is there a clear primary → secondary → tertiary reading order?
-- Does size, weight, and contrast guide the eye to the right place?
+### Design Direction Validation
 
-**2. Spacing and Layout**
-- Is there consistent spacing (4px/8px grid system)?
-- Are related elements grouped? Unrelated elements separated?
-- Is there enough whitespace? (Too tight = overwhelming. Too loose = disconnected.)
+If a design direction file exists at `outputs/prototypes/[feature]-design-direction.md` (from `/design-direction`), validate the prototype against those parameters:
 
-**3. Typography**
+- **Variance:** Does the prototype's distinctiveness match the target level?
+- **Motion:** Are animations at the right intensity? Too much? Too little?
+- **Density:** Is information density appropriate for the target?
+- **Anti-patterns:** Does the prototype violate any items on the ban list?
+- **Style preset:** If a preset was chosen (soft, minimal, brutalist), does the prototype feel consistent with it?
+
+### 7-Dimension Visual Critique Framework
+
+**1. Typography**
+- Is there a clear hierarchy? (Headline, subhead, body, caption are visually distinct)
 - Maximum 2-3 type styles in use (not 5+ variations)
 - Font sizes appropriate for reading distance and device
 - Line length readable (45-75 characters per line for body text)
+- Brand-aligned font choices (not default system fonts without intention)
 
-**4. Color**
+**2. Color and Surfaces**
 - Does color communicate meaning, not just aesthetics?
 - Sufficient contrast ratios for accessibility (4.5:1 for body text, 3:1 for large text)
 - No more than 3-4 primary colors in use
+- Surface depth is clear (backgrounds, cards, layers are visually differentiated)
+- No AI purple gradients, neon glows, or pure black (#000) backgrounds
 
-**5. Consistency**
+**3. Layout**
+- Does the layout support natural scanning patterns?
+- Is there consistent spacing (4px/8px grid system)?
+- Are related elements grouped? Unrelated elements separated?
+- Enough whitespace? (Too tight = overwhelming. Too loose = disconnected.)
+- No cookie-cutter layouts (generic 3-column icon grids, centered hero when variance > 0.4)
+
+**4. Interactivity**
+- Are all interactive states designed? (Hover, focus, active, disabled, loading)
+- Feedback for every user action (clicks, submissions, toggles)
+- Animations serve a purpose (guide attention, show state change)
+- Hardware-accelerated only (transform/opacity, not layout properties)
+
+**5. Content**
+- Realistic sample data (not Lorem ipsum or "Jane Doe")
+- Microcopy is clear and action-oriented (buttons say what they do)
+- Empty, error, and success states are designed
+- No AI cliches or generic marketing copy
+
+**6. Components**
 - Does this match the design system?
 - Are interactive elements (buttons, links, inputs) visually consistent?
 - Are similar things styled the same way?
+- No emoji used as functional icons (use SVG icons instead)
+
+**7. Code Quality (Visual Impact)**
+- Images optimized (no slow loads)
+- Animations don't cause layout shift or jank
+- Semantic HTML and ARIA labels present
+- Responsive behavior works at all breakpoints
 
 ### Design Critique Output Format
 
 ```
 ## Visual Design Critique: [Feature / Screen]
 
+### Design Direction Check
+[If design direction exists: Does this prototype match the target parameters?
+ Variance: [Match/Deviation] | Motion: [Match/Deviation] | Density: [Match/Deviation]
+ Anti-pattern violations: [List any]]
+
+### Dimension Scores
+
+| Dimension | Score (1-5) | Key Issue |
+|-----------|-------------|-----------|
+| Typography | X/5 | [One-line] |
+| Color & Surfaces | X/5 | [One-line] |
+| Layout | X/5 | [One-line] |
+| Interactivity | X/5 | [One-line] |
+| Content | X/5 | [One-line] |
+| Components | X/5 | [One-line] |
+| Code Quality | X/5 | [One-line] |
+
 ### Strongest elements
-[What's working well — be specific]
+[What's working well -- be specific]
 
 ### Issues by severity
 
 **High (fix before launch):**
-- [Issue]: [What it is] → [How to fix it]
+- [Issue] (Dimension: [X]): [What it is] -> [How to fix it]
 
 **Medium (address in next iteration):**
-- [Issue]: [What it is] → [How to fix it]
+- [Issue] (Dimension: [X]): [What it is] -> [How to fix it]
 
 **Low (nice to have):**
-- [Issue]: [What it is] → [Suggestion]
+- [Issue] (Dimension: [X]): [What it is] -> [Suggestion]
 
 ### Accessibility flags
-- [Any contrast or readability issues]
-
-### Design system consistency
-- [What aligns] / [What diverges and whether it should]
+- [Any contrast, keyboard, or screen reader issues]
 ```

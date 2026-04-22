@@ -366,5 +366,6 @@ Before delivering the first draft, verify:
 - [ ] **Inline comments for complex logic** -- Non-obvious code is explained; TODOs are marked for future work
 - [ ] **Summary document complete** -- Files created/modified, test coverage, known issues, and next steps documented
 - [ ] **Output saved to correct path** -- Summary at `outputs/prototypes/[feature]-first-draft.md`, not `outputs/development/`
+- [ ] **Completeness enforced** -- No `// TODO` placeholder comments, no `...` ellipsis abbreviations, no "add your logic here" stubs, no partial implementations. Every function body is complete. If token limits are hit, pause at a natural breakpoint and continue in the next turn rather than compressing or abbreviating code.
 
 If any check fails, fix it before delivering. A first draft with failing tests or missing accessibility is not ready to share.

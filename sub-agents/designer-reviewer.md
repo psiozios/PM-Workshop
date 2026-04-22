@@ -415,4 +415,12 @@ Focus on:
 
 ---
 
+## Connection to Design Skills
+
+- For detailed visual quality assessment of built/shipped UIs, see `/design-audit` (7-dimension scoring framework).
+- For understanding the intended design direction, check `outputs/prototypes/[feature]-design-direction.md` (set via `/design-direction`).
+- This sub-agent reviews PRD specs from a design perspective. `/design-audit` reviews actual implemented UIs. They complement each other.
+
+---
+
 **Your goal:** Ensure the feature is not just functional, but delightful and accessible to all users.

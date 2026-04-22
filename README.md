@@ -7,13 +7,13 @@ Your AI-powered copilot for modern product management. Built for Claude Code.
 Most PMs use AI the same way they use Google: one-off questions, zero context. This system works differently.
 
 - **Context over prompting.** AI is only as good as the context you give it. PM Workshop organizes your company knowledge, writing styles, stakeholder profiles, and past decisions so every output sounds like it came from someone who actually works there.
-- **Workflows, not chat.** 71 slash commands cover the full PM loop: strategy, research, PRDs, metrics, meetings, launches, prototyping, code, knowledge management, and retrospectives. Each one builds on the others.
+- **Workflows, not chat.** 73 slash commands cover the full PM loop: strategy, research, PRDs, metrics, meetings, launches, prototyping, design, code, knowledge management, and retrospectives. Each one builds on the others.
 - **Ship the draft, then iterate.** Documents are living artifacts. A 1-page PRD that ships Monday beats a 10-page spec that ships never.
 
 ## What You Get
 
 - **Pre-built context library** with templates for company info, writing styles, stakeholder profiles, and strategic frameworks (7 Powers, JTBD, PLG Iceberg, Growth Loops, and more)
-- **71 slash commands** for recurring PM tasks, from PRDs and meeting notes to pricing analysis, code reviews, and a compounding second-brain wiki
+- **73 slash commands** for recurring PM tasks, from PRDs and meeting notes to pricing analysis, design direction, code reviews, and a compounding second-brain wiki
 - **7 sub-agents** for multi-perspective reviews (engineer, designer, executive, legal, UX researcher, skeptic, customer voice)
 - **Knowledge assets** including 63 curated interview questions, validated survey templates, canvas templates, and 139 AI prompt references
 - **Example PRDs** demonstrating modern best practices
@@ -89,7 +89,7 @@ pm-workshop/
 ├── LICENSE.md                      # MIT License
 │
 ├── .claude/
-│   └── skills/                     # 71 registered slash commands
+│   └── skills/                     # 73 registered slash commands
 │
 ├── setup/                          # Installation and configuration guides
 ├── advanced/                       # Advanced workflows and automation
@@ -144,7 +144,7 @@ Unlike ChatGPT or regular Claude:
 ### Three Layers of Context
 
 1. **Project Knowledge** (`context-library/`) - Company info, writing styles, stakeholder profiles, strategy frameworks, and past decisions that apply across all your work
-2. **Skills** (`.claude/skills/`) - 71 registered slash commands for recurring tasks, each with built-in context routing and cross-skill integration
+2. **Skills** (`.claude/skills/`) - 73 registered slash commands for recurring tasks, each with built-in context routing and cross-skill integration
 3. **Sub-Agents** (`sub-agents/`) - 7 specialized reviewers for multi-perspective feedback
 
 When you ask Claude to draft a PRD, it automatically:
@@ -154,7 +154,7 @@ When you ask Claude to draft a PRD, it automatically:
 - Checks alignment with your strategy and OKRs
 - Includes real examples from your library
 
-## Available Skills (71 Total)
+## Available Skills (73 Total)
 
 Type `/` in Claude Code to see the autocomplete menu with all commands.
 
@@ -226,13 +226,15 @@ Type `/` in Claude Code to see the autocomplete menu with all commands.
 | `/competitor-analysis` | Deep competitive analysis with SWOT, Porter's Five Forces, PESTEL |
 | `/sales-battlecard` | Create competitive battle cards for the sales team |
 
-### Prototyping and Design (4)
+### Prototyping and Design (6)
 | Command | What it does |
 |---------|-------------|
-| `/prototype` | Advanced prototyping with Artifacts, Figma, Lovable, v0, Bolt |
-| `/generate-ai-prototype` | Generate AI prototype prompts from PRD specs |
+| `/design-direction` | Set visual tone using 3-parameter system (variance, motion, density); presets: `--style soft`, `--style minimal`, `--style brutalist`; output for designers, AI tools, or PRDs; `--strict` for engineering-ready specs |
+| `/design-audit` | Structured 7-dimension UI audit (typography, color, layout, interactivity, content, components, code quality); supports `--competitor`, `--benchmark`, `--quick` |
+| `/prototype` | Advanced prototyping with Artifacts, Figma, Lovable, v0, Bolt (auto-loads design direction) |
+| `/generate-ai-prototype` | Generate AI prototype prompts from PRD specs (supports `--with-taste` for design direction) |
 | `/napkin-sketch` | ASCII wireframes and browser capture |
-| `/prototype-feedback` | Build, review, iterate workflow (supports `--design`) |
+| `/prototype-feedback` | Build, review, iterate workflow (supports `--design` with 7-dimension scoring) |
 
 ### Development and Execution (16)
 | Command | What it does |
@@ -284,6 +286,12 @@ Monday `/weekly-plan` → daily workflow → Friday `/weekly-review` → `/statu
 
 **Strategic Planning:**
 `/define-north-star` → `/metrics-framework` → `/write-prod-strategy` → `/prioritize`
+
+**Design-Led Prototyping:**
+`/design-direction` → `/generate-ai-prototype --with-taste` → `/prototype-feedback --design` → iterate
+
+**Design Audit and Improve:**
+`/design-audit [existing-ui]` → `/design-direction` (set target) → `/prototype` (build improved version) → `/prototype-feedback --design`
 
 **Build with AI (for PMs who code):**
 `/cto-consult` → `/explore-codebase` → `/execution-plan` → `/code-first-draft --from-plan` → `/code-review` → `/update-docs`

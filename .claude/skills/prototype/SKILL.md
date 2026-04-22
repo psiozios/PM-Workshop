@@ -52,6 +52,7 @@ When this skill is invoked, immediately check:
 | Stakeholder Profiles | Stakeholder templates | design reviewers | Who will review this and what they care about |
 | Business Info | `context-library/business-info-template.md` | brand, product | Brand guidelines, product context, existing UI patterns |
 | Competitor Analysis | `context-library/research/competitive-*.md` | feature name | Competitor implementations for reference |
+| Design Direction | `outputs/prototypes/*-design-direction.md` | feature name | Variance, motion, density parameters, style preset, anti-patterns |
 
 **Context Priority:**
 1. PRD requirements and user flows FIRST (what to build)
@@ -62,6 +63,7 @@ When this skill is invoked, immediately check:
 **Cross-Skill Links:**
 - If no PRD exists --> suggest `/prd-draft` first ("Prototype without requirements = guessing")
 - If no user research --> suggest `/interview-guide` ("Who are you designing for?")
+- If no design direction exists --> suggest `/design-direction` ("Set the visual tone before building. What should this feel like?")
 - After prototype is built --> suggest `/prototype-feedback` for structured review
 - If prototype needs AI behavior --> link to `/generate-ai-prototype` for prompt generation
 - If starting from scratch visually --> suggest `/napkin-sketch` first for quick layout
@@ -587,6 +589,8 @@ Before presenting the prototype or prompt, verify:
 - [ ] File saved with correct naming convention: `[feature-name]-[type]-v[N].md`
 - [ ] Requirements verification checklist included (PRD requirements mapped to prototype coverage with reasons for any gaps)
 - [ ] Next steps are clear (how to test, how to iterate, how to get feedback)
+- [ ] Design direction applied -- If a design direction file exists, parameters and anti-patterns are reflected in the prototype prompt
+- [ ] Completeness enforced -- No placeholder text, no TODO stubs, no abbreviated implementations. All states (loading, error, empty, success) are fully realized, not commented out.
 
 ---
 
